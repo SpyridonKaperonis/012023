@@ -45,10 +45,10 @@ export const NavBar = (props) => {
 
         <div style={styles.linkedInGitContainer}>
             <div style={styles.GLIcons}>
-                <BsGithub size={40} onClick={undefined}/>
+                <BsGithub size={'4vh'} onClick={undefined}/>
             </div>
             <div style={styles.GLIcons}>
-                <BsLinkedin size={40} onClick={undefined}/>
+                <BsLinkedin size={'4vh'} onClick={undefined}/>
             </div>
           
         </div>

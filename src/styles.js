@@ -23,9 +23,9 @@ const NavBar = {
     flexDirection: 'column', 
     width: '25vh',
     height: '100vh',
-    backgroundColor: 'lightblue',
+    backgroundColor: '#E5E4E2',
     position: 'fixed',
-    borderRight: '2px solid black',
+    borderRight: '2px solid white',
     // backgroundColor: 'lightyellow', 
     // borderColor: 'black',
     // borderWidth: '5', 
@@ -38,7 +38,8 @@ const dateContainer = {
     alignItems: 'center',
     justifyContent: 'center',
     margin: '1vh',
-    backgroundColor: 'lightyellow',
+    fontSize: '2vh',
+    backgroundColor: 'white',
 };
 
 const buttonsContainer = {
@@ -52,8 +53,11 @@ const sideBarButtons = {
     flexDirection: 'row',
     justifyContent: 'center',
     padding: '3vh',
-    margin: '0.3vh',
-    backgroundColor: 'lightyellow',
+    marginTop: '1.5vh',
+    backgroundColor: 'white',
+    fontWeight: 'bold',
+    fontSize: '2.1vh',
+    textDecoration: 'none'
 
     
 
@@ -62,15 +66,18 @@ const sideBarButtons = {
 
 const linkedInGitContainer = {
     display: 'flex',
-    marginTop: '50vh',
+    marginTop: '40vh',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'red'
 }
 
 const GLIcons = {
-  margin: '2vh'
+  margin: '2vh', 
+  padding: '2vh',
+  border: '1px solid black',
+  borderRadius: '2vh', 
 }
+
 
 
 //---------------------------------------------------
@@ -85,7 +92,24 @@ const ScrollView = {
   display: 'flex',
   flexDirection: 'column',
   marginLeft: '25vh',
-  border: '2px solid red'
+  border: '2px solid red',
+  backgroundColor: '#FFFFFF',
+  alignItems: 'center',
+}
+
+//-----------------------------------------------------
+
+
+//------ CARD -----------
+//---------------------------------------------------
+
+const card = {
+  display: 'flex', 
+  flexDirection: 'row', 
+  padding: '4vh',
+  margin: '3vh',
+  border:'2px solid red',
+  borderRadius: '2vh',
 }
 
 const dateSpace = {
@@ -128,4 +152,5 @@ export const styles = {
   GLIcons: GLIcons,
   buttonsContainer: buttonsContainer,
   ScrollView: ScrollView,
+  card: card,
 }
