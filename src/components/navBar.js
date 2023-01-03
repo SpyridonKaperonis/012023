@@ -28,21 +28,20 @@ export const NavBar = (props) => {
 
 
   return (
-    <div style={styles.Container}>
+    <>
         <div style={styles.dateContainer}>
             <h3 style={styles.dateSpace}>{newDate.dayNum}</h3>
             <h3 style={styles.dateSpace}>{newDate.day}</h3>
             <h3 style={styles.dateSpace}>{newDate.month}</h3>
             <h3 style={styles.dateSpace}>{newDate.year}</h3>
         </div>
-        <a>Home</a>
-        <a>Resume</a>
-        <a>Personal Interests</a>
+        <a href='' style={styles.sideBarButtons}>Home</a>
+        <a href='' style={styles.sideBarButtons}>Resume</a>
+        <a href='' style={styles.sideBarButtons}>Personal Interests</a>
         <div>
             <a>LinkedIn</a>
             <a>GitHub</a>
         </div>
-    </div>
-   
+    </>
   );
 };

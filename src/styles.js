@@ -3,26 +3,41 @@ const Container = {
     flexDirection: "column" };
 
 const ParentContainer = {
-    display: 'flex', 
-    flexDirection: 'column',
-    width: '100%',
-    height: '100%'
+    display: 'block',
+    flexWrap: 'wrap',
+    backgroundColor: 'lightblue',
+    width: '20%',
+
 };
 
 const NavBar = {
     display: 'flex',
-    flexDirection: 'row', 
+    flexDirection: 'column', 
     height: '100%',
-    backgroundColor: 'lightyellow', 
-    borderColor: 'black',
-    borderWidth: '5', 
-    alignItems: 'center',
-    marginRight: '80%'};
+    // backgroundColor: 'lightyellow', 
+    // borderColor: 'black',
+    // borderWidth: '5', 
+    // marginRight: '80%'
+};
 
 const dateContainer = {
     display: 'flex',
     flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: '5px',
+    backgroundColor: 'lightyellow',
 };
+
+const sideBarButtons = {
+    display: 'flex',
+    flexDirection: 'row',
+    padding: '30px',
+    margin: '5px',
+    backgroundColor: 'lightyellow',
+
+    
+}
 
 const dateSpace = {
     padding: '3px'
@@ -58,5 +73,6 @@ export const styles = {
   FormContainer: FormContainer, 
   NavBar: NavBar,
   dateContainer: dateContainer,
-  dateSpace: dateSpace
+  dateSpace: dateSpace,
+  sideBarButtons: sideBarButtons,
 }
