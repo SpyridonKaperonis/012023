@@ -1,5 +1,6 @@
 import React from 'react'
 import { styles } from '../styles';
+import { BsGithub, BsLinkedin } from 'react-icons/bs'
 
 function formater(date){
     console.log('Two')
@@ -25,23 +26,32 @@ export const NavBar = (props) => {
     console.log('One')
     const newDate = formater(original_date)
   
+    // 9019015914
 
 
   return (
-    <>
+    <div style={styles.Container}>
         <div style={styles.dateContainer}>
             <h3 style={styles.dateSpace}>{newDate.dayNum}</h3>
             <h3 style={styles.dateSpace}>{newDate.day}</h3>
             <h3 style={styles.dateSpace}>{newDate.month}</h3>
             <h3 style={styles.dateSpace}>{newDate.year}</h3>
         </div>
-        <a href='' style={styles.sideBarButtons}>Home</a>
-        <a href='' style={styles.sideBarButtons}>Resume</a>
-        <a href='' style={styles.sideBarButtons}>Personal Interests</a>
-        <div>
-            <a>LinkedIn</a>
-            <a>GitHub</a>
+        <div style={styles.buttonsContainer}>
+            <a href='' style={styles.sideBarButtons}>Home</a>
+            <a href='' style={styles.sideBarButtons}>Resume</a>
+            <a href='' style={styles.sideBarButtons}>Personal Interests</a>
         </div>
-    </>
+
+        <div style={styles.linkedInGitContainer}>
+            <div style={styles.GLIcons}>
+                <BsGithub size={40} onClick={undefined}/>
+            </div>
+            <div style={styles.GLIcons}>
+                <BsLinkedin size={40} onClick={undefined}/>
+            </div>
+          
+        </div>
+    </div>
   );
 };

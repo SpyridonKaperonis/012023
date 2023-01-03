@@ -1,5 +1,6 @@
 import './App.css';
 import  {NavBar} from './components/navBar';
+import { ScrollView } from './components/scrollView';
 import {styles} from './styles';
 
 
@@ -12,6 +13,9 @@ function App() {
     <div style={styles.ParentContainer}>
       <div style={styles.NavBar}>
         <NavBar date={DateTime}/>
+      </div>
+      <div style={styles.ScrollView}>
+        <ScrollView/>
       </div>
     </div>
   );

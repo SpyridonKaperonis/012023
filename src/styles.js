@@ -1,19 +1,31 @@
 const Container = { 
     display: "flex", 
-    flexDirection: "column" };
+    flexDirection: "column",
+    borderWidth: '4px',
+    borderColor: 'black',
+    
+  };
 
 const ParentContainer = {
     display: 'block',
-    flexWrap: 'wrap',
-    backgroundColor: 'lightblue',
-    width: '20%',
+    width: '193vh',
+    height: '100vh',
+    position: 'relative',
+    
 
 };
+
+//---- SIDEBAR ------
+//-----------------------------------------------
 
 const NavBar = {
     display: 'flex',
     flexDirection: 'column', 
-    height: '100%',
+    width: '25vh',
+    height: '100vh',
+    backgroundColor: 'lightblue',
+    position: 'fixed',
+    borderRight: '2px solid black',
     // backgroundColor: 'lightyellow', 
     // borderColor: 'black',
     // borderWidth: '5', 
@@ -25,18 +37,55 @@ const dateContainer = {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    margin: '5px',
+    margin: '1vh',
     backgroundColor: 'lightyellow',
+};
+
+const buttonsContainer = {
+  display: 'flex',
+  flexDirection: 'column',
+  marginTop: '5vh'
 };
 
 const sideBarButtons = {
     display: 'flex',
     flexDirection: 'row',
-    padding: '30px',
-    margin: '5px',
+    justifyContent: 'center',
+    padding: '3vh',
+    margin: '0.3vh',
     backgroundColor: 'lightyellow',
 
     
+
+    
+};
+
+const linkedInGitContainer = {
+    display: 'flex',
+    marginTop: '50vh',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'red'
+}
+
+const GLIcons = {
+  margin: '2vh'
+}
+
+
+//---------------------------------------------------
+
+
+
+//---- SCROLLVIEW ------
+//-----------------------------------------------
+
+
+const ScrollView = {
+  display: 'flex',
+  flexDirection: 'column',
+  marginLeft: '25vh',
+  border: '2px solid red'
 }
 
 const dateSpace = {
@@ -75,4 +124,8 @@ export const styles = {
   dateContainer: dateContainer,
   dateSpace: dateSpace,
   sideBarButtons: sideBarButtons,
+  linkedInGitContainer: linkedInGitContainer,
+  GLIcons: GLIcons,
+  buttonsContainer: buttonsContainer,
+  ScrollView: ScrollView,
 }
