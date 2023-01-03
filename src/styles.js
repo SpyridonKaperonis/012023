@@ -57,6 +57,7 @@ const sideBarButtons = {
     backgroundColor: 'white',
     fontWeight: 'bold',
     fontSize: '2.1vh',
+    color: 'black',
     textDecoration: 'none'
 
     
@@ -91,26 +92,37 @@ const GLIcons = {
 const ScrollView = {
   display: 'flex',
   flexDirection: 'column',
-  marginLeft: '25vh',
+  marginLeft: '25.4vh',
   border: '2px solid red',
   backgroundColor: '#FFFFFF',
   alignItems: 'center',
-}
+};
 
 //-----------------------------------------------------
 
 
-//------ CARD -----------
+//------ CARDS -----------
 //---------------------------------------------------
+
+const cardsContainer = {
+  display: 'flex', 
+  flexDirection: 'row', 
+}
 
 const card = {
   display: 'flex', 
-  flexDirection: 'row', 
-  padding: '4vh',
+  flexDirection: 'column', 
   margin: '3vh',
   border:'2px solid red',
   borderRadius: '2vh',
+};
+
+const InCard = {
+
 }
+
+
+//------------------------------------------------------
 
 const dateSpace = {
     padding: '3px'
@@ -152,5 +164,7 @@ export const styles = {
   GLIcons: GLIcons,
   buttonsContainer: buttonsContainer,
   ScrollView: ScrollView,
+  cardsContainer: cardsContainer,
   card: card,
+  inCard: InCard,
 }

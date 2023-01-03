@@ -1,7 +1,6 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { styles } from '../styles';
 
 export const GithubCard = (props) => {
     const image = props.image;
@@ -9,14 +8,14 @@ export const GithubCard = (props) => {
     const text = props.text;
     const hyperlink = props.link;
   return (
-    <Card style={styles.card}>
-      <Card.Img variant="top" src={image} />
+    <Card>
+      <Card.Img style={{borderTopLeftRadius: '2vh', borderTopRightRadius: '2vh', height: '14vh', width: '1oo%'}} variant="top" src={image} />
       <Card.Body>
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>
+        <Card.Title style={{margin: '1vh'}}>{title}</Card.Title>
+        <Card.Text style={{margin: '1vh'}}>
           {text}
         </Card.Text>
-        <Button variant="primary" href={hyperlink} >Go somewhere</Button>
+        <Button style={{margin: '1vh'}} variant="primary" href={hyperlink} >Explore Repo</Button>
       </Card.Body>
     </Card>
   )
