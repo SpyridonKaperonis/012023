@@ -11,7 +11,7 @@ export const GithubCard = (props) => {
     <Card>
       <Card.Img style={{borderTopLeftRadius: '2vh', borderTopRightRadius: '2vh', height: '14vh', width: '1oo%'}} variant="top" src={image} />
       <Card.Body>
-        <Card.Title style={{margin: '1vh'}}>{title}</Card.Title>
+        <Card.Title style={{margin: '1vh', fontWeight: 'bold', fontSize:'2vh'}}>{title}</Card.Title>
         <Card.Text style={{margin: '1vh'}}>
           {text}
         </Card.Text>

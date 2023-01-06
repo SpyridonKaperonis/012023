@@ -15,21 +15,19 @@ export const About = () => {
 
   return (
 
-    // The first div is the Wrapper
     <>
-    <div>
-      <ParagraphAbout text={aboutParagraphs.one}/>
-    
-      <ParagraphAbout text={aboutParagraphs.two}/>
+      <div>
+        <ParagraphAbout text={aboutParagraphs.one}/>
       
-      <ParagraphAbout text={aboutParagraphs.three}/>
+        <ParagraphAbout text={aboutParagraphs.two}/>
+        
+        <ParagraphAbout text={aboutParagraphs.three}/>
 
-      <ParagraphAbout text={aboutParagraphs.four}/>
+        <ParagraphAbout text={aboutParagraphs.four}/>
 
-      <ParagraphAbout text={aboutParagraphs.five}/>
-      
-    </div>
-
-</>
+        <ParagraphAbout text={aboutParagraphs.five}/>
+        
+      </div>
+    </>
   )
 }

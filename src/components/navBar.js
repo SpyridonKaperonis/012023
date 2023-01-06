@@ -1,6 +1,7 @@
-import { styles } from '../pages/styles';
+// import { styles } from '../pages/styles';
+import { useState } from 'react';
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function formater(date){
     console.log('Two')
@@ -21,11 +22,34 @@ function formater(date){
     }
 }
 
+function buttonColorChange(stateNumber){
+
+    return(
+    
+     
+        {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        padding: '3vh',
+        marginTop: '1.5vh',
+        backgroundColor: 'white',
+        fontWeight: 'bold',
+        fontSize: '3vh',
+        color: 'black',
+        textDecoration: 'none'
+        }
+    
+    )
+
+}
+
 export const NavBar = (props) => {
     const original_date = props.date.toString()
     console.log('One')
     const newDate = formater(original_date)
   
+
     // 9019015914
 
 
@@ -39,14 +63,22 @@ export const NavBar = (props) => {
         </div>
         <div style={styles.buttonsContainer}>
             <nav>
-        
-                <Link to={'/'} style={styles.sideBarButtons}>Intro</Link>
+               
+                <Link 
+                    to={'/'}
+                    style={useLocation().pathname==='/' ? styles.sideBarButtonClicked : styles.sideBarButton}>Intro</Link>
 
-                <Link to={'/about'} style={styles.sideBarButtons}>About</Link>
+                <Link 
+                    to={'/about'}  
+                    style={useLocation().pathname==='/about' ? styles.sideBarButtonClicked : styles.sideBarButton}>About</Link>
         
-                <Link to={'/resume'} style={styles.sideBarButtons}>Resume</Link>
+                <Link 
+                    to={'/resume'} 
+                    style={useLocation().pathname==='/resume' ? styles.sideBarButtonClicked : styles.sideBarButton}>Resume</Link>
             
-                <Link to={'/projects'} style={styles.sideBarButtons}>Projects</Link>
+                <Link 
+                    to={'/projects'} 
+                    style={useLocation().pathname==='/projects' ? styles.sideBarButtonClicked : styles.sideBarButton}>Projects</Link>
             
             </nav>
         </div>
@@ -64,6 +96,76 @@ export const NavBar = (props) => {
   );
 };
 
+const styles = {
+    Container: {
+        display: "flex", 
+        flexDirection: "column",
+        borderWidth: '4px',
+        borderColor: 'black',
+    
+    },
 
+    dateContainer:{
+        display: 'flex',
+        flexDirection: 'row',
+   
+        justifyContent: 'center',
+        margin: '1vh',
+        fontSize: '2vh',
+        backgroundColor: '#E5E4E2',
+    },
+
+    dateSpace: {
+    padding: '3px'
+    },   
+
+    buttonsContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        marginTop: '5vh'
+    },
+
+    sideBarButton: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        padding: '3vh',
+        marginTop: '1.5vh',
+        backgroundColor: '#E5E4E2',
+        fontWeight: 'bold',
+        fontSize: '3vh',
+        color: 'black',
+        textDecoration: 'none'
+    },
+
+    sideBarButtonClicked: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        padding: '3vh',
+        marginTop: '1.5vh',
+        backgroundColor: 'white',
+        fontWeight: 'bold',
+        fontSize: '3vh',
+        color: 'black',
+        textDecoration: 'none'
+    },
+
+    linkedInGitContainer: {
+        display: 'flex',
+        marginTop: '28vh',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    GLIcons: {
+        margin: '2vh', 
+        padding: '2vh',
+        border: '1px solid black',
+        borderRadius: '2vh', 
+    },
+
+
+}
 
 

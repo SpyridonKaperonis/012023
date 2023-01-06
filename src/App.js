@@ -3,14 +3,14 @@ import  {NavBar} from './components/navBar';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ScrollView } from './components/scrollView';
-import {styles} from './pages/styles';
+// import {styles} from './pages/styles';
 
 import { About } from './pages/about';
 import { Resume } from './pages/resume';
 import { Projects } from './pages/projects';
 import { Intro } from './pages/intro';
 
-function App() {
+export default function App() {
 
   const DateTime = new Date();
 
@@ -22,20 +22,72 @@ function App() {
           <NavBar date={DateTime}/>
         </div>
         <div style={styles.scrollviewContainer}>
-          <div style={styles.ScrollView}>
+         
             <Routes>
               <Route exact path='/' element={<Intro/>} />
               <Route path='/about' element={<About/>} />
               <Route path='/resume' element={<Resume/>} />
               <Route path='/projects' element={<Projects/>} />
-
             </Routes>
-           
-          </div>
+          
         </div>
       </div>
     </Router>
   );
 }
 
-export default App;
+
+
+
+const styles = {
+  Container:{
+    display: "flex", 
+    flexDirection: "column",
+    borderWidth: '4px',
+    borderColor: 'black',
+  },
+ 
+  ParentContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '193vh',
+    height: '100vh',
+    position: 'relative',
+  },
+
+  NavBar: {
+    display: 'flex',
+    flexDirection: 'column', 
+    position: 'fixed',
+    width: '25vh',
+    height: '100vh',
+    backgroundColor: '#E5E4E2',
+    borderRight: '2px solid white',
+    // backgroundColor: 'lightyellow', 
+    // borderColor: 'black',
+    // borderWidth: '5', 
+    // marginRight: '80%'
+  },
+
+  scrollviewContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    position: 'relative',
+    marginTop: '10vh',
+    marginBottom: '10vh',
+    marginLeft: '35.4vh',
+    marginRight: '10.4vh',
+    border: '2px solid blue',
+  },
+
+  ScrollView: {
+    display: 'flex',
+    flexDirection: 'row',
+
+    border: '2px solid red',
+    backgroundColor: '#FFFFFF',
+    alignItems: 'center',
+  },
+
+
+}

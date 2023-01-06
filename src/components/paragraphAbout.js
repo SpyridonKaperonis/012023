@@ -12,6 +12,8 @@ export const ParagraphAbout = (props) => {
 
 const styles = {
     text:{
+        display: 'flex',
+        flexDirection: 'row',
         fontSize: '3vh',
         textIndent: '1vh',
     }

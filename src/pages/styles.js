@@ -7,7 +7,7 @@ const Container = {
   };
 
 const ParentContainer = {
-    display: 'block',
+    display: 'flex',
     width: '193vh',
     height: '100vh',
     position: 'relative',
@@ -21,10 +21,10 @@ const ParentContainer = {
 const NavBar = {
     display: 'flex',
     flexDirection: 'column', 
+    position: 'fixed',
     width: '25vh',
     height: '100vh',
     backgroundColor: '#E5E4E2',
-    position: 'fixed',
     borderRight: '2px solid white',
     // backgroundColor: 'lightyellow', 
     // borderColor: 'black',
@@ -88,21 +88,19 @@ const GLIcons = {
 //---- SCROLLVIEW ------
 //-----------------------------------------------
 const scrollviewContainer = {
-  display: 'block',
+  display: 'flex',
+  flexDirection: 'row',
   position: 'fixed',
-  flexDirection: 'column',
   marginTop: '10vh',
   marginBottom: '10vh',
   marginLeft: '35.4vh',
   marginRight: '10.4vh',
-  width: '140vh',
-  height: '80vh',
   border: '2px solid blue',
 };
 
 const ScrollView = {
   display: 'flex',
-  flexDirection: 'column',
+  flexDirection: 'row',
   height: '100%',
   width: '100%',
   border: '2px solid red',
