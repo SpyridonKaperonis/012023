@@ -2,6 +2,10 @@ import React from 'react'
 import { GithubCard } from '../components/githubCard'
 
 
+import tree from '../images/treeSplitData.png'
+import roadExtraction from '../images/valData_prediction.png'
+import hand from '../images/image14.png'
+
 export const Projects = () => {
   return (
     <>
@@ -14,19 +18,21 @@ export const Projects = () => {
             <GithubCard 
               title={'Sign Language Recognition'} 
               text={'This is your opportunity'}
-              image={'https://www.nasa.gov/sites/default/files/thumbnails/image/main_image_star-forming_region_carina_nircam_final-5mb.jpg'}
+              image={hand}
               />
             </div>
         <div style={styles.card}> 
             <GithubCard
               title={'English Proficiency'}
               text={'Description'}
+              image={tree}
               />
         </div>
         <div style={styles.card}> 
             <GithubCard
               title={'Satellite Road Extraction'}
               text={'Description'}
+              image={roadExtraction}
               />
         </div>
       </div>
