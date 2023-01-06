@@ -1,6 +1,6 @@
-import React from 'react'
-import { styles } from '../styles';
+import { styles } from '../pages/styles';
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
+import { Link } from 'react-router-dom';
 
 function formater(date){
     console.log('Two')
@@ -38,9 +38,17 @@ export const NavBar = (props) => {
             <h3 style={styles.dateSpace}>{newDate.year}</h3>
         </div>
         <div style={styles.buttonsContainer}>
-            <a href='' style={styles.sideBarButtons}>Home</a>
-            <a href='' style={styles.sideBarButtons}>Resume</a>
-            <a href='' style={styles.sideBarButtons}>Personal Interests</a>
+            <nav>
+        
+                <Link to={'/'} style={styles.sideBarButtons}>Intro</Link>
+
+                <Link to={'/about'} style={styles.sideBarButtons}>About</Link>
+        
+                <Link to={'/resume'} style={styles.sideBarButtons}>Resume</Link>
+            
+                <Link to={'/projects'} style={styles.sideBarButtons}>Projects</Link>
+            
+            </nav>
         </div>
 
         <div style={styles.linkedInGitContainer}>
@@ -55,3 +63,7 @@ export const NavBar = (props) => {
     </div>
   );
 };
+
+
+
+
