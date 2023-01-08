@@ -72,11 +72,14 @@ const styles = {
   scrollviewContainer: {
     display: 'flex',
     flexDirection: 'row',
+    overflowY :'scroll',
+    overflowX:'hidden',
     position: 'relative',
-    marginTop: '10vh',
-    marginBottom: '10vh',
-    marginLeft: '35.4vh',
-    marginRight: '10.4vh',
+    marginTop: '8vh',
+    marginBottom: '8vh',
+    marginLeft: '33.4vh',
+    marginRight: '8.4vh',
+    padding:'2vh',
     border: '2px solid blue',
   },
 
