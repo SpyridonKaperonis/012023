@@ -11,7 +11,7 @@ export const Projects = () => {
     <>
     <div>
       <div>
-        <h2>Most Recent</h2>
+        <h1 style={{marginLeft: '3vh'}}>Most Recent</h1>
       </div>
       <div style={styles.cardsContainer}>
         <div style={styles.card}>
@@ -19,6 +19,7 @@ export const Projects = () => {
               title={'Sign Language Recognition'} 
               text={'This is your opportunity'}
               image={hand}
+              image_={true}
               />
             </div>
         <div style={styles.card}> 
@@ -26,6 +27,7 @@ export const Projects = () => {
               title={'English Proficiency'}
               text={'Description'}
               image={tree}
+              image_={true}
               />
         </div>
         <div style={styles.card}> 
@@ -33,18 +35,24 @@ export const Projects = () => {
               title={'Satellite Road Extraction'}
               text={'Description'}
               image={roadExtraction}
+              image_={true}
               />
         </div>
       </div>
       <div style={styles.card}> 
           <GithubCard
             title={'Textbook Service System'}
-            text={'Description'}/>
+            text={'Description'}
+            image_={false}
+            />
+            
       </div>
       <div style={styles.card}>
         <GithubCard
           title={'tennis Social Network'}
           text={'Description'}
+          image_={false}
+
           />
       </div>
     </div>
@@ -63,7 +71,6 @@ const styles = {
     flexDirection: 'column', 
     margin: '3vh',
     border:'2px solid red',
-    borderRadius: '2vh',
   }, 
 
 
