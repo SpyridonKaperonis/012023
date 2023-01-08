@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import { Link, useLocation } from 'react-router-dom';
+import { GitHubLinkedInBtn } from './gitHubLinkedInBtn';
 
 function formater(date){
     console.log('Two')
@@ -22,35 +23,27 @@ function formater(date){
     }
 }
 
-function buttonColorChange(stateNumber){
 
-    return(
-    
-     
-        {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        padding: '3vh',
-        marginTop: '1.5vh',
-        backgroundColor: 'white',
-        fontWeight: 'bold',
-        fontSize: '3vh',
-        color: 'black',
-        textDecoration: 'none'
-        }
-    
-    )
 
-}
+
+
+
 
 export const NavBar = (props) => {
     const original_date = props.date.toString()
     console.log('One')
     const newDate = formater(original_date)
   
+    // let [over, setOver] = useState(false);
 
-    // 9019015914
+    // if(over){
+    //     styles.GLIcons.backgroundColor='red';
+    //     console.log('OVER')
+    // }
+    // else {
+    //     styles.GLIcons.backgroundColor='';
+    //     console.log('OUT')
+    // }
 
 
   return (
@@ -90,7 +83,6 @@ export const NavBar = (props) => {
             <div style={styles.GLIcons}>
                 <BsLinkedin size={'4vh'} onClick={undefined}/>
             </div>
-          
         </div>
     </div>
   );
@@ -163,8 +155,8 @@ const styles = {
         padding: '2vh',
         border: '1px solid black',
         borderRadius: '2vh', 
+        backgroundColor: '',
     },
-
 
 }
 
