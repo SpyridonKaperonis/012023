@@ -7,9 +7,10 @@ export const GithubCard = (props) => {
     const title = props.title;
     const text = props.text;
     const hyperlink = props.link;
+    const image_ = props.image_;
   return (
-    <Card style={{alignItems: 'center'}}>
-      <Card.Img style={{borderTopLeftRadius: '2vh', borderTopRightRadius: '2vh', height: '14vh', width: '1oo%'}} variant="top" src={image} />
+    <Card style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+      {image_ ?  <Card.Img style={{height: '20vh', width: '1oo%'}} variant="top" src={image} /> : null}
       <Card.Body>
         <Card.Title style={{margin: '1vh', fontWeight: 'bold', fontSize:'2vh'}}>{title}</Card.Title>
         <Card.Text style={{margin: '1vh'}}>
