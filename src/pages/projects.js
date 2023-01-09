@@ -17,7 +17,12 @@ export const Projects = () => {
         <div style={styles.card}>
             <GithubCard 
               title={'Sign Language Recognition'} 
-              text={'This is your opportunity'}
+              text={<p>Develops three different machine learning algorithms
+                to recognize sign language letters.  
+                <li>Convolution Neural Network</li>
+                <li>Support Vector Machine</li>
+                <lI>k-Nearest Neighbors</lI>
+              </p>}
               image={hand}
               image_={true}
               />
@@ -25,7 +30,9 @@ export const Projects = () => {
         <div style={styles.card}> 
             <GithubCard
               title={'English Proficiency'}
-              text={'Description'}
+              text={<p>Grade students learning English as a second language. 
+                Developed three different algorithms to grade essays in terms of cohesion,
+                syntax, vocabulary, phraseology, grammar, and conventions. </p>}
               image={tree}
               image_={true}
               />
@@ -69,7 +76,7 @@ const styles = {
   card:{
     display: 'flex', 
     flexDirection: 'column', 
-    margin: '3vh',
+    margin: '1vh',
     border:'2px solid red',
   }, 
 
