@@ -77,6 +77,7 @@ export const NavBar = (props) => {
         </div>
 
         <div style={styles.linkedInGitContainer}>
+            
             <div style={styles.GLIcons}>
                 <BsGithub size={'4vh'} onClick={undefined}/>
             </div>
