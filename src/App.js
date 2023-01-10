@@ -22,14 +22,12 @@ export default function App() {
           <NavBar date={DateTime}/>
         </div>
         <div style={styles.scrollviewContainer}>
-         
             <Routes>
               <Route exact path='/' element={<Intro/>} />
               <Route path='/about' element={<About/>} />
               <Route path='/resume' element={<Resume/>} />
               <Route path='/projects' element={<Projects/>} />
             </Routes>
-          
         </div>
       </div>
     </Router>
@@ -72,8 +70,9 @@ const styles = {
   scrollviewContainer: {
     display: 'flex',
     flexDirection: 'row',
-    overflowY :'scroll',
-    overflowX:'hidden',
+    overflow: 'scroll',
+    overflowY :'auto',
+    overflowX:'auto',
     position: 'relative',
     marginTop: '8vh',
     marginBottom: '8vh',
