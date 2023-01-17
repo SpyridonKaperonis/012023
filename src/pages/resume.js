@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Document, Page } from 'react-pdf'
 
-import pdf from '../pdf/ClaudeShannonInformationTheoryPaper.pdf'
+import pdf_ from './pdf/ClaudeShannonInformationTheoryPaper.pdf'
 
 export const Resume = () => {
   const [numPages, setNumPages] = useState(null);
@@ -13,7 +13,7 @@ export const Resume = () => {
 
   return (
     <div>
-      <Document file={pdf} onLoadSuccess={onDocumentLoadSuccess}>
+      <Document file={pdf_} onLoadSuccess={onDocumentLoadSuccess}>
         <Page pageNumber={pageNumber} />
       </Document>
       <p>

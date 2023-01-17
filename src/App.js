@@ -48,8 +48,8 @@ const styles = {
   ParentContainer: {
     display: 'flex',
     flexDirection: 'column',
-    width: '193vh',
-    height: '100vh',
+    width: '100%',
+    height: '100%',
     position: 'relative',
   },
 
@@ -57,10 +57,11 @@ const styles = {
     display: 'flex',
     flexDirection: 'column', 
     position: 'fixed',
-    width: '25vh',
-    height: '100vh',
+    width: '22vh',
+    height: '100%',
     backgroundColor: '#E5E4E2',
     borderRight: '2px solid white',
+    zIndex: '1'
     // backgroundColor: 'lightyellow', 
     // borderColor: 'black',
     // borderWidth: '5', 
@@ -76,10 +77,12 @@ const styles = {
     position: 'relative',
     marginTop: '8vh',
     marginBottom: '8vh',
-    marginLeft: '33.4vh',
-    marginRight: '8.4vh',
+    marginLeft: '24.4vh',
+    marginRight: '1.4vh',
+
     padding:'2vh',
     border: '2px solid blue',
+    zIndex: '0'
   },
 
   ScrollView: {
