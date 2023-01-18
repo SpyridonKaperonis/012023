@@ -80,6 +80,10 @@ const styles = {
     marginLeft: '24.4vh',
     marginRight: '1.4vh',
 
+    justifyContent: 'center',
+
+    backgroundColor: '#f0f0f0',
+
     padding:'2vh',
     border: '2px solid blue',
     zIndex: '0'
