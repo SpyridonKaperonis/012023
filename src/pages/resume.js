@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { getValue } from '@testing-library/user-event/dist/utils';
 import React, {useState, useEffect} from 'react'
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack'
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5'
 
 
 
-import pdf_ from './pdf/claude.pdf'
+import pdf_ from './pdf/Spyridon_Kaperonis_Resume_Simple.pdf'
 
 
 
@@ -15,9 +15,34 @@ export const Resume = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const [zoomScale, setScale] = useState(2.6);
   const [pageInputValue, setpageInputValue] = useState();
+  const [plusButton, setPlusButton] = useState(false);
+  const [minusButton, setMinutButton] = useState(false);
+  const [nextButton, setNextButton] = useState(false);
+  const [backButton, setBackButton] = useState(false);
+  const [downloadButton, setDownloadButton] = useState(false);
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
+  }
+
+  function nextPage(){
+    if(numPages>1){
+      setPageNumber(pageNumber +1)
+    }
+    setNextButton(!nextButton)
+    setTimeout(() => {
+      setNextButton(false)
+      }, 400)
+  }
+
+  function previousPage(){
+    if(numPages>1){
+      setBackButton(!backButton)
+    }
+    setBackButton(!backButton)
+    setTimeout(() => {
+      setBackButton(false)
+    }, 400)
   }
 
   function downloadPdf(url, filename){
@@ -39,8 +64,17 @@ export const Resume = () => {
   
     return(
       <>
-      <Document  file={pdf_} onLoadSuccess={onDocumentLoadSuccess}>
-        <Page scale={zoomScale} pageNumber={pageNumber} /> 
+      <Document 
+        file={pdf_} 
+        options={{ workerSrc: "/pdf.worker.js" }} 
+        onLoadSuccess={onDocumentLoadSuccess}
+        onItemClick={({ dest, pageIndex, pageNumber }) => alert('Clicked an item from page ' + pageNumber + '!')}
+        >
+        <Page 
+          scale={zoomScale} 
+          pageNumber={pageNumber}
+          
+          /> 
       </Document>
       </>
     )
@@ -50,42 +84,60 @@ export const Resume = () => {
     <div style={styles.container}>
       <div style={styles.controlBar}>
         <div style={styles.subSections}>
-          <a href={"javascript:void(0)"} 
-            onClick={() => {setScale(zoomScale + 0.2)}} 
-            style={styles.aRef}>+</a>
-          <a href={"javascript:void(0)"} 
-            onClick={() => {setScale(zoomScale - 0.2)}} 
-            style={styles.aRef}>-</a>
-        </div>
-        <div style={styles.subSections}>
-          <a href={"javascript:void(0)"}
+          <div 
             onClick={() => {
-            if(pageNumber>1){
-              setPageNumber(pageNumber -1)
-            }
+              setScale(zoomScale + 0.2)
+              setPlusButton(!plusButton)
+              setTimeout(() => {
+                setPlusButton(false)
+              }, 400)}} 
+            style={{...styles.aRef, backgroundColor: plusButton ? '#ffbd03' : 'white'}}>+</div>
+
+
+          <div
+            onClick={() => {
+              setScale(zoomScale - 0.2)
+              setMinutButton(!minusButton)
+              setTimeout(() => {
+                setMinutButton(false)
+              }, 400)}} 
+            style={{...styles.aRef, backgroundColor: minusButton ? '#ffbd03' : 'white', marginLeft: '0.6vh'}}>-</div>
+        
+        </div>
+
+        <div style={styles.subSections}>
+          <div 
+            onClick={() => {
+              previousPage()
             
-            }} style={styles.aRef}>Back</a>
+            }} style={{...styles.aRef, backgroundColor: backButton ? '#ffbd03' : 'white'}}>{'<'}</div>
           <p style={{
               fontSize: '2vh',
               marginRight: '2vh',
               marginLeft: '2vh',
               }}>
-          {/* <input 
-              style={styles.pageInput} 
-              onChange={() => {setpageInputValue(pageInputValue)}}
-              value={pageNumber}></input> */}
+
           {pageNumber} of {numPages}
         </p>
-         <a href={"javascript:void(0)"} 
+
+         <div
             onClick={() => {
-              if(numPages>1){
-                setPageNumber(pageNumber +1)}
-              }} 
-            style={styles.aRef}>Next</a>
+              nextPage()
+              }
+            
+            } 
+            style={{...styles.aRef, backgroundColor: nextButton ? '#ffbd03' : 'white'}}>{'>'}</div>
         </div>
         <div style={styles.subSections}>
           <a href={"javascript:void(0)"} 
-            onClick={() => {downloadPdf(pdf_, 'Spyridon_Kaperonis_Resume.pdf')}} style={styles.aRef}>Download</a>
+            onClick={() => {
+              setDownloadButton(!downloadButton);
+              setTimeout(() => {
+                setDownloadButton(false);
+              }, 900)
+              downloadPdf(pdf_, 'Spyridon_Kaperonis_Resume.pdf')
+              
+              }} style={{...styles.aRef, backgroundColor: downloadButton ? '#ffbd03' : 'white'}}>Download</a>
         </div>
       </div>
 
@@ -141,7 +193,8 @@ const styles = {
     alighItems: 'center',
     justifyContent: 'center',
     color: 'black',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    cursor: 'pointer',
   },
 
   pdfStyle: {
@@ -160,5 +213,9 @@ const styles = {
     alighItems: 'center',
     textAlign: 'center',
     alignSelf: 'center',
+  }, 
+  pdfStyleNew:{
+    background: 'linear-gradient(75deg, #3B43F2, #3B8CF2)', 
+    webkitBackgroundClip: 'text',
   }
 }
