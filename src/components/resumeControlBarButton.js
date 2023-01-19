@@ -10,7 +10,7 @@ export const ResumeControlBarButton = (props) => {
 
   return (
    
-    <a  href={'#'} style={{...styles.aRef, ...style1}}>{name}</a>
+    <a  href={'#'} onClick={() => {styles.aRef.backgroundColor='black'}} style={{...styles.aRef, ...style1}}>{name}</a>
     
   )
 
