@@ -14,7 +14,7 @@ const styles = {
     text:{
         display: 'flex',
         flexDirection: 'row',
-        fontSize: '3vh',
+        fontSize: '20px',
         textIndent: '1vh',
     }
 };

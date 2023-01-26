@@ -59,27 +59,27 @@ export const Resume = () => {
     
   }
 
-  const ViewerPDF = () => {
+  // const ViewerPDF = () => {
 
-    const [page, setPage] = useState(1);
-    const canvasRef = useRef(null);
+  //   const [page, setPage] = useState(1);
+  //   const canvasRef = useRef(null);
 
-    const { pdfDocument, pdfPage } = usePdf({
-      file: './pdf/Spyridon_Kaperonis_Resume_Simple.pdf',
-      page,
-      canvasRef
-    });
+  //   const { pdfDocument, pdfPage } = usePdf({
+  //     file: './pdf/Spyridon_Kaperonis_Resume_Simple.pdf',
+  //     page,
+  //     canvasRef
+  //   });
   
 
-    return (
+  //   return (
   
-        <div>
-          {!pdfDocument && <span>Loading...</span>}
-          <canvas ref={canvasRef} />
+  //       <div>
+  //         {!pdfDocument && <span>Loading...</span>}
+  //         <canvas ref={canvasRef} />
           
-        </div>
-      );
-    }
+  //       </div>
+  //     );
+  //   }
 
   const MyPDF = () => {
   
@@ -88,8 +88,8 @@ export const Resume = () => {
       <Document 
         file={pdf_}
         options={{ workerSrc: "/pdf.worker.js" }} 
-        // onLoadSuccess={onDocumentLoadSuccess}
-        // onItemClick={({ dest, pageIndex, pageNumber }) => alert('Clicked an item from page ' + pageNumber + '!')}
+        onLoadSuccess={onDocumentLoadSuccess}
+        onItemClick={({ dest, pageIndex, pageNumber }) => alert('Clicked an item from page ' + pageNumber + '!')}
         >
         <Page 
           scale={zoomScale} 
@@ -163,7 +163,8 @@ export const Resume = () => {
       </div>
 
       <div style={styles.pdfStyle}>
-        <ViewerPDF/>
+        {/* <ViewerPDF/> */}
+        <MyPDF />
         <p>
           Page {pageNumber} of {numPages}
         </p>
@@ -174,12 +175,13 @@ export const Resume = () => {
 
 const styles = {
   container: {
-    width: '100%', 
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alighItems: 'center',
+    position: 'relative',
+    // width: '100%', 
+    // height: '100%',
+    // display: 'flex',
+    // flexDirection: 'column',
+    // justifyContent: 'center',
+    // alighItems: 'center',
   },
 
   controlBar: {

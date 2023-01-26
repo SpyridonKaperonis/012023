@@ -54,13 +54,15 @@ const styles = {
     width: '100%',
     height: '100%',
     position: 'relative',
+
   },
 
   NavBar: {
     display: 'flex',
     flexDirection: 'column', 
     position: 'fixed',
-    width: '22vh',
+    width: '10%',
+    minWidth: '145px',
     height: '100%',
     backgroundColor: '#E5E4E2',
     borderRight: '2px solid white',
@@ -74,13 +76,15 @@ const styles = {
   scrollviewContainer: {
     display: 'flex',
     flexDirection: 'column',
+    position: 'fixed',
+    height: '93%',
+    width: '86%',
     overflow: 'scroll',
     overflowY :'auto',
     overflowX:'auto',
-    position: 'relative',
-    marginTop: '2vh',
+    marginTop: '1vh',
     marginBottom: '2vh',
-    marginLeft: '24.4vh',
+    marginLeft: '10.5%',
     marginRight: '1.4vh',
 
     justifyContent: 'center',

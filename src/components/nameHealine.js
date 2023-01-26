@@ -12,7 +12,7 @@ export const NameHeadline = (props) => {
 
 const styles = {
     name: {
-        fontSize: '5vh',
+        fontSize: '40px',
         fontWeight: 'bold',
 
     }

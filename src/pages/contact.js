@@ -17,18 +17,56 @@ function handleSubmit(){
 
 
 export const Contact = () => {
-  const [firstName, setfirstname] = useState('First Name');
-  const [onFirstName, setonFirstName] = useState(false);
+  const [firstName, setfirstname] = useState('');
+  const [LastName, setLastName] = useState('');
+  const [Email, setEmail] = useState('');
+  const [PhoneNum, setPhone] = useState();
 
+
+  const [onFirstName, setonFirstName] = useState(false);
+  const [onLastName, setonLastName] = useState(false);
+  const [onEmail, setonEmail] = useState(false);
+  const [onPhone, setonPhone] = useState(false);
+  const [onSubject, setonSubject] = useState(false);
+  const [onContent, setonContent] = useState(false);
   
 
-  const handleChange = event => {
-    setfirstname({event});
+  const handleFNameChange = event => {
+    setfirstname(event.target.value);
+  }
+  const handleLNameChange = event => {
+    setLastName(event.target.value);
+  }
+  const handleEmailChange = event => {
+    setEmail(event.target.value);
+  }
+  const handlePhoneChange = event => {
+    setPhone(event.target.value);
   }
 
-  const changeBorderColor = (e) => {
+
+
+  const changeBorderColorF = (e) => {
     setonFirstName(e);
   }
+  const changeBorderColorL = (e) => {
+    setonLastName(e);
+  }
+  const changeBorderColorE = (e) => {
+    setonEmail(e);
+  }
+  const changeBorderColorP = (e) => {
+    setonPhone(e);
+  }
+  const changeBorderColorS = (e) => {
+    setonSubject(e);
+  }
+  const changeBorderColorC = (e) => {
+    setonContent(e);
+  }
+
+
+
 
   return (
       <>
@@ -37,22 +75,28 @@ export const Contact = () => {
           <p style={styles.headLine}>Contact Me</p>
         </div>
         <div style={styles.inputsGuide}>
-          <form style={styles.inputsContainer} onSubmit={() => handleSubmit()}>
+          <form style={styles.inputsContainer} 
+          spellCheck={true}
+          
+          onSubmit={() => handleSubmit()}>
            
-            <TextField id='firstName' 
+            {/* <TextField id='firstName' 
                         label={'First Name'} 
                         required style={styles.inputsStyle}
                         
                         
                         
-            />
+            /> */}
             <input type='text' 
                     name='FirstName'
                     placeholder='First Name'
-                    onChange={(e) => handleChange(e)}
-                    style={{...styles.inputsStyle, border: onFirstName ? '1px solid blue': ''}}
-                    onMouseEnter={() => changeBorderColor(true)}
-                    onMouseOut={() => changeBorderColor(false)}
+                    required={true}
+                    value={firstName}
+                    onChange={(e) => handleFNameChange(e)}
+                    style={{...styles.inputsStyle, border: onFirstName ? '1px solid black': '1px solid #E5E4E2'}}
+                    onMouseEnter={() => changeBorderColorF(true)}
+                    onMouseOut={() => changeBorderColorF(false)}
+                    onFocus={''}
                 
             />
 
@@ -60,27 +104,36 @@ export const Contact = () => {
             <input type='text' 
                     name='LastName'
                     placeholder='Last Name'
-                    value={undefined} 
-                    onChange={undefined}
-                    style={styles.inputsStyle}
+                    required={true}
+                    value={LastName} 
+                    onChange={(e) => handleLNameChange(e)}
+                    style={{...styles.inputsStyle, border: onLastName ? '1px solid black': '1px solid #E5E4E2'}}
+                    onMouseEnter={() => changeBorderColorL(true)}
+                    onMouseOut={() => changeBorderColorL(false)}
             />
          
           
             <input type='email' 
                     name='Email'
                     placeholder='Email'
-                    value={undefined} 
-                    onChange={undefined}
-                    style={styles.inputsStyle}
+                    required={true}
+                    value={Email} 
+                    onChange={(e) => handleEmailChange(e)}
+                    style={{...styles.inputsStyle, border: onEmail ? '1px solid black': '1px solid #E5E4E2'}}
+                    onMouseEnter={() => changeBorderColorE(true)}
+                    onMouseOut={() => changeBorderColorE(false)}
+
             />
          
        
-            <input type='text'
+            <input type='tel'
                     name='Phone' 
                     placeholder='Phone Number'
-                    value={undefined} 
-                    onChange={undefined}
-                    style={styles.inputsStyle}
+                    value={PhoneNum} 
+                    onChange={(e) => handlePhoneChange(e)}
+                    style={{...styles.inputsStyle, border: onPhone ? '1px solid black': '1px solid #E5E4E2'}}
+                    onMouseEnter={() => changeBorderColorP(true)}
+                    onMouseOut={() => changeBorderColorP(false)}
             />
           
       
@@ -89,20 +142,31 @@ export const Contact = () => {
                     placeholder='Subject'
                     value={undefined} 
                     onChange={undefined}
-                    style={styles.inputsStyle}
+                    style={{...styles.inputsStyle, border: onSubject ? '1px solid black': '1px solid #E5E4E2'}}
+                    onMouseEnter={() => changeBorderColorS(true)}
+                    onMouseOut={() => changeBorderColorS(false)}
             />
        
            
-            <input type='textarea' 
+            <textarea
                     name='Content'
-                    placeholder='Content'
+                    placeholder={'Write in 250 characters.'}
+                    required={true}
+                    rows={5}
+                    cols={50}
+                    maxLength={250}
                     value={undefined} 
                     onChange={undefined}
-                    // style={styles.inputsStyle}
+                    style={{...styles.inputTextareaStyle, border: onContent ? '1px solid black': '1px solid #E5E4E2'}}
+                    onMouseEnter={() => changeBorderColorC(true)}
+                    onMouseOut={() => changeBorderColorC(false)}
             />
           
-            <input type={'submit'} value='Submit' />
+            <input style={styles.submitButton} type={'submit'} value='Send' />
           </form>
+          <div style={{position: 'absolute', height:'5vh',width: '4vh'}}>
+
+          </div>
 
           </div>
         </div>
@@ -114,42 +178,66 @@ const styles = {
   container:{ 
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    height: '100%'
   },
 
   inputsGuide: {
-    marginRight: '5vh'
+    alignSelf: 'center',
+    marginLeft: '5%',
+    marginRight: '5%',
   },
 
   inputsContainer:{
     display: 'flex',
     flexDirection: 'column',
     border: '1px solid black',
+    maxWidth: '800px',
+    width: '50%',
     padding: '5vh'
   },
 
   inputsStyle: {
-    
-    margin: '1vh',
-    fontSize: '3vh',
-    border: '0px',
+    height: '5vh',  
+    outline: 'none',
+    fontSize: '20px',
+  },
+
+  inputTextareaStyle: {
+    height: '9vh',
+    width: '98.4%',
+    outline: 'none',
+    fontSize: '20px',
+    resize: 'vertical'
   },
 
   labelsStyle: {
-    fontSize: '3vh',
+    fontSize: '2vh',
   },
 
   headLineContainer: {
     border: '1px solid black',
-    marginLeft: '5vh'
+    marginLeft: '5vh',
+    marginTop: '10vh',
   },
 
   headLine: {
-    fontSize: '3vh',
+    fontSize: '4vh',
     fontWeight: 'bold'
   },
 
-  
+  submitButton: {
+    marginTop: '10px',
+    height: '5vh',
+    minWidth: '200px',
+    
+    backgroundColor: '#E5E4E2',
+    fontSize: '20px',
+    outline: 'none',
+    cursor: 'pointer',
+
+    
+  }
 
 
 }

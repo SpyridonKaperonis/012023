@@ -11,7 +11,7 @@ export const GitHubLinkedInBtn = () => {
     const navigate = useNavigate();
 
     const navigateToGitHub = () => {
-        window.open('https://www.github.com')
+        window.open('https://github.com/SpyridonKaperonis')
     }
     const navigateToLinkedIn = () => {
         window.open('https://www.linkedin.com')
@@ -21,14 +21,14 @@ export const GitHubLinkedInBtn = () => {
   return (
     <>
        
-        <BsGithub size={'4vh'} style={{...styles.GIcon, backgroundColor: GisOn ? 'white' : ''}} onClick={ () => navigateToGitHub()}
+        <BsGithub size={'70px'} style={{...styles.GIcon, backgroundColor: GisOn ? 'white' : ''}} onClick={ () => navigateToGitHub()}
         onMouseOver={() => setGIsOn(true)} onMouseOut={() => setGIsOn(false)}
         
         
         />
         
       
-        <BsLinkedin size={'4vh'} style={{...styles.LIcon, backgroundColor: LisOn ? 'white' : ''}} onClick={() => navigateToLinkedIn()}
+        <BsLinkedin size={'70px'} style={{...styles.LIcon, backgroundColor: LisOn ? 'white' : ''}} onClick={() => navigateToLinkedIn()}
         onMouseOver={() => setLIsOn(true)} onMouseOut={() => setLIsOn(false)}
         />
 
@@ -39,12 +39,12 @@ export const GitHubLinkedInBtn = () => {
 
 const styles = {
     GIcon: {
-        padding: '3.4vh',
+        padding: '13%',
         cursor: 'pointer'
       
     },
     LIcon: {
-        padding: '3.4vh',
+        padding: '13%',
         cursor: 'pointer'
   
     },

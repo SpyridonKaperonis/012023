@@ -87,6 +87,7 @@ const styles = {
         display: "flex", 
         flexDirection: "column",
         height: '100%',
+    
         borderWidth: '4px',
         borderColor: 'black',
         justifyContent: 'space-between',
@@ -99,12 +100,13 @@ const styles = {
    
         justifyContent: 'center',
         margin: '1vh',
-        fontSize: '2vh',
+        fontSize: '2vh 2vw',
         backgroundColor: '#E5E4E2',
     },
 
     dateSpace: {
-        padding: '3px'
+        padding: '3px',
+        fontSize: '90%'
     },   
 
     buttonsContainer: {
@@ -120,7 +122,7 @@ const styles = {
         marginTop: '1.5vh',
         backgroundColor: '#E5E4E2',
         fontWeight: 'bold',
-        fontSize: '3vh',
+        fontSize: '110%',
         color: 'black',
         textDecoration: 'none'
     },
@@ -133,7 +135,7 @@ const styles = {
         marginTop: '1.5vh',
         backgroundColor: 'white',
         fontWeight: 'bold',
-        fontSize: '3vh',
+        fontSize: '115%',
         color: 'black',
         textDecoration: 'none'
     },
