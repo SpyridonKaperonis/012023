@@ -23,13 +23,8 @@ function formater(date){
     }
 }
 
-
-
-
-
-
-
 export const NavBar = (props) => {
+
     const original_date = props.date.toString()
     console.log('One')
     const newDate = formater(original_date)
@@ -47,24 +42,23 @@ export const NavBar = (props) => {
 
 
   return (
+
     <div style={styles.Container}>
+
         <div style={styles.dateContainer}>
             <h3 style={styles.dateSpace}>{newDate.dayNum}</h3>
             <h3 style={styles.dateSpace}>{newDate.day}</h3>
             <h3 style={styles.dateSpace}>{newDate.month}</h3>
             <h3 style={styles.dateSpace}>{newDate.year}</h3>
         </div>
+
         <div style={styles.buttonsContainer}>
             <nav>
                
                 <Link 
                     to={'/'}
-                    style={useLocation().pathname==='/' ? styles.sideBarButtonClicked : styles.sideBarButton}>Intro</Link>
+                    style={useLocation().pathname==='/' ? styles.sideBarButtonClicked : styles.sideBarButton}>About Me</Link>
 
-                <Link 
-                    to={'/about'}  
-                    style={useLocation().pathname==='/about' ? styles.sideBarButtonClicked : styles.sideBarButton}>About</Link>
-        
                 <Link 
                     to={'/resume'} 
                     style={useLocation().pathname==='/resume' ? styles.sideBarButtonClicked : styles.sideBarButton}>Resume</Link>
@@ -72,19 +66,18 @@ export const NavBar = (props) => {
                 <Link 
                     to={'/projects'} 
                     style={useLocation().pathname==='/projects' ? styles.sideBarButtonClicked : styles.sideBarButton}>Projects</Link>
+                
+                <Link 
+                    to={'/contact'} 
+                    style={useLocation().pathname==='/contact' ? styles.sideBarButtonClicked : styles.sideBarButton}>Contact</Link>
             
             </nav>
         </div>
 
         <div style={styles.linkedInGitContainer}>
-            
-            <div style={styles.GLIcons}>
-                <BsGithub size={'4vh'} onClick={undefined}/>
-            </div>
-            <div style={styles.GLIcons}>
-                <BsLinkedin size={'4vh'} onClick={undefined}/>
-            </div>
+            <GitHubLinkedInBtn />
         </div>
+
     </div>
   );
 };
@@ -93,8 +86,10 @@ const styles = {
     Container: {
         display: "flex", 
         flexDirection: "column",
+        height: '100%',
         borderWidth: '4px',
         borderColor: 'black',
+        justifyContent: 'space-between',
     
     },
 
@@ -109,13 +104,12 @@ const styles = {
     },
 
     dateSpace: {
-    padding: '3px'
+        padding: '3px'
     },   
 
     buttonsContainer: {
         display: 'flex',
         flexDirection: 'column',
-        marginTop: '5vh'
     },
 
     sideBarButton: {
@@ -146,17 +140,14 @@ const styles = {
 
     linkedInGitContainer: {
         display: 'flex',
-        marginTop: '28vh',
+        flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center',
+       
     },
 
     GLIcons: {
-        margin: '2vh', 
-        padding: '2vh',
+        padding: '3.4vh',
         border: '1px solid black',
-        borderRadius: '2vh', 
-        backgroundColor: '',
     },
 
 }

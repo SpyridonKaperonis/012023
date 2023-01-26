@@ -1,43 +1,51 @@
+import { setSelectionRange } from '@testing-library/user-event/dist/utils';
 import React, { useState } from 'react'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
+import { useNavigate } from 'react-router-dom';
 
 
 export const GitHubLinkedInBtn = () => {
 
-    let [over, setOver] = useState(false);
+    const [GisOn, setGIsOn] = useState(false);
+    const [LisOn, setLIsOn] = useState(false);
+    const navigate = useNavigate();
 
-    if(over){
-        styles.GLIcons.backgroundColor='white';
-        console.log('OVER')
+    const navigateToGitHub = () => {
+        window.open('https://www.github.com')
     }
-    else {
-        styles.GLIcons.backgroundColor='';
-        console.log('OUT')
+    const navigateToLinkedIn = () => {
+        window.open('https://www.linkedin.com')
     }
 
-    // const handleMouseOver = () => {setOver(true)}
-
-
-
+    
   return (
-    <div>
-        <div style={styles.GLIcons}>
-            <BsGithub size={'4vh'} onClick={undefined}/>
-        </div>
-        <div style={styles.GLIcons}>
-            <BsLinkedin size={'4vh'} onClick={undefined}/>
-        </div>
-    </div>
+    <>
+       
+        <BsGithub size={'4vh'} style={{...styles.GIcon, backgroundColor: GisOn ? 'white' : ''}} onClick={ () => navigateToGitHub()}
+        onMouseOver={() => setGIsOn(true)} onMouseOut={() => setGIsOn(false)}
+        
+        
+        />
+        
+      
+        <BsLinkedin size={'4vh'} style={{...styles.LIcon, backgroundColor: LisOn ? 'white' : ''}} onClick={() => navigateToLinkedIn()}
+        onMouseOver={() => setLIsOn(true)} onMouseOut={() => setLIsOn(false)}
+        />
+
+    </>
   )
 };
 
 
 const styles = {
-    GLIcons: {
-        margin: '2vh', 
-        padding: '2vh',
-        border: '1px solid black',
-        borderRadius: '2vh', 
-        backgroundColor: '',
+    GIcon: {
+        padding: '3.4vh',
+        cursor: 'pointer'
+      
+    },
+    LIcon: {
+        padding: '3.4vh',
+        cursor: 'pointer'
+  
     },
 }

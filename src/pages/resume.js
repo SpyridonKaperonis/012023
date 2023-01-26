@@ -1,11 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { getValue } from '@testing-library/user-event/dist/utils';
-import React, {useState, useEffect} from 'react'
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5'
+import React, {useState, useEffect, useRef} from 'react';
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
+import { usePdf } from '@mikecousins/react-pdf';
 
-
-
-import pdf_ from './pdf/Spyridon_Kaperonis_Resume_Simple.pdf'
+import pdf_ from './pdf/Spyridon_Kaperonis_Resume_Simple.pdf';
 
 
 
@@ -60,15 +59,37 @@ export const Resume = () => {
     
   }
 
+  const ViewerPDF = () => {
+
+    const [page, setPage] = useState(1);
+    const canvasRef = useRef(null);
+
+    const { pdfDocument, pdfPage } = usePdf({
+      file: './pdf/Spyridon_Kaperonis_Resume_Simple.pdf',
+      page,
+      canvasRef
+    });
+  
+
+    return (
+  
+        <div>
+          {!pdfDocument && <span>Loading...</span>}
+          <canvas ref={canvasRef} />
+          
+        </div>
+      );
+    }
+
   const MyPDF = () => {
   
     return(
       <>
       <Document 
-        file={pdf_} 
+        file={pdf_}
         options={{ workerSrc: "/pdf.worker.js" }} 
-        onLoadSuccess={onDocumentLoadSuccess}
-        onItemClick={({ dest, pageIndex, pageNumber }) => alert('Clicked an item from page ' + pageNumber + '!')}
+        // onLoadSuccess={onDocumentLoadSuccess}
+        // onItemClick={({ dest, pageIndex, pageNumber }) => alert('Clicked an item from page ' + pageNumber + '!')}
         >
         <Page 
           scale={zoomScale} 
@@ -142,7 +163,7 @@ export const Resume = () => {
       </div>
 
       <div style={styles.pdfStyle}>
-        <MyPDF/>
+        <ViewerPDF/>
         <p>
           Page {pageNumber} of {numPages}
         </p>
