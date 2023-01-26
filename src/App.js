@@ -2,13 +2,12 @@ import './App.css';
 import  {NavBar} from './components/navBar';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { ScrollView } from './components/scrollView';
-// import {styles} from './pages/styles';
 
 import { About } from './pages/about';
 import { Resume } from './pages/resume';
 import { Projects } from './pages/projects';
-import { Intro } from './pages/intro';
+import { Footer } from './components/footer';
+import { Contact } from './pages/contact';
 
 export default function App() {
 
@@ -23,12 +22,16 @@ export default function App() {
         </div>
         <div style={styles.scrollviewContainer}>
             <Routes>
-              <Route exact path='/' element={<Intro/>} />
-              <Route path='/about' element={<About/>} />
+              <Route exact path='/' element={<About/>} />
               <Route path='/resume' element={<Resume/>} />
               <Route path='/projects' element={<Projects/>} />
+              <Route path='/contact' element={<Contact/>} />
             </Routes>
         </div>
+        {/* <div>
+        <Footer/>
+        </div> */}
+     
       </div>
     </Router>
   );
@@ -70,13 +73,13 @@ const styles = {
 
   scrollviewContainer: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     overflow: 'scroll',
     overflowY :'auto',
     overflowX:'auto',
     position: 'relative',
-    marginTop: '8vh',
-    marginBottom: '8vh',
+    marginTop: '2vh',
+    marginBottom: '2vh',
     marginLeft: '24.4vh',
     marginRight: '1.4vh',
 
