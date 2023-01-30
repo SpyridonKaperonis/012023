@@ -25,6 +25,7 @@ export const Projects = () => {
               </p>}
               image={hand}
               image_={true}
+              link={'https://github.com/SpyridonKaperonis/SignLanguageRecognition'}
               />
             </div>
         <div style={styles.card}> 
@@ -38,6 +39,7 @@ export const Projects = () => {
                 <li>Support Vector Machine</li></p>}
               image={tree}
               image_={true}
+              link={'https://github.com/SpyridonKaperonis/EnglishLanguageLearning'}
               />
         </div>
         <div style={styles.card}> 
@@ -48,6 +50,7 @@ export const Projects = () => {
               </p>}
               image={roadExtraction}
               image_={true}
+              link={'https://github.com/SpyridonKaperonis/SatelliteRoadExtraction'}
               />
         </div>
       </div>
@@ -56,6 +59,7 @@ export const Projects = () => {
             title={'Textbook Service System'}
             text={'Description'}
             image_={false}
+            link={'https://github.com/SpyridonKaperonis/TextBookServices'}
             />
             
       </div>
@@ -83,7 +87,7 @@ const styles = {
     flexDirection: 'column', 
     margin: '1vh',
     padding: '0.5vh',
-    backgroundColor: '#f7f7f7'
+    backgroundColor: '#C8D8E4'
   }, 
 
 

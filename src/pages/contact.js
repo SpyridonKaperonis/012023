@@ -29,7 +29,14 @@ export const Contact = () => {
   const [onPhone, setonPhone] = useState(false);
   const [onSubject, setonSubject] = useState(false);
   const [onContent, setonContent] = useState(false);
-  
+
+  const [onFocusFN, setonFocusFN] = useState(false);
+  const [onFocusLN, setonFocusLN] = useState(false);
+  const [onFocusEmail, setonFocusEmail] = useState(false);
+  const [onFocusPhone, setonFocusPhone] = useState(false);
+  const [onFocusSubject, setonFocusSubject] = useState(false);
+  const [onFocusContent, setonFocusContent] = useState(false);
+
 
   const handleFNameChange = event => {
     setfirstname(event.target.value);
@@ -68,6 +75,35 @@ export const Contact = () => {
 
 
 
+
+  const onFocusChangeFN = (e) => {
+    setonFocusFN(e);
+  }
+  const onFocusChangeLN = (e) => {
+    setonFocusLN(e);
+  }  
+  
+  const onFocusChangeEmail = (e) => {
+    setonFocusEmail(e);
+  }  
+
+  const onFocusChangePhone = (e) => {
+    setonFocusPhone(e);
+  }
+
+  const onFocusChangeSubject = (e) => {
+    setonFocusSubject(e);
+  }
+
+  const onFocusChangeContent = (e) => {
+    setonFocusContent(e);
+  }
+    
+  
+
+
+
+
   return (
       <>
       <div style={styles.container}>
@@ -93,10 +129,15 @@ export const Contact = () => {
                     required={true}
                     value={firstName}
                     onChange={(e) => handleFNameChange(e)}
-                    style={{...styles.inputsStyle, border: onFirstName ? '1px solid black': '1px solid #E5E4E2'}}
+                    style={{...styles.inputsStyle, 
+                      border: onFirstName ? '1px solid black': '1px solid #E5E4E2',
+                      backgroundColor: onFocusFN ? '#FAFFE8': 'white'
+                    }}
                     onMouseEnter={() => changeBorderColorF(true)}
                     onMouseOut={() => changeBorderColorF(false)}
-                    onFocus={''}
+                    onFocus={() => onFocusChangeFN(true)}
+                    onBlur={() => onFocusChangeFN(false)}
+                    
                 
             />
 
@@ -107,9 +148,14 @@ export const Contact = () => {
                     required={true}
                     value={LastName} 
                     onChange={(e) => handleLNameChange(e)}
-                    style={{...styles.inputsStyle, border: onLastName ? '1px solid black': '1px solid #E5E4E2'}}
+                    style={{...styles.inputsStyle, 
+                      border: onLastName ? '1px solid black': '1px solid #E5E4E2',
+                      backgroundColor: onFocusLN ? '#FAFFE8': 'white'
+                    }}
                     onMouseEnter={() => changeBorderColorL(true)}
                     onMouseOut={() => changeBorderColorL(false)}
+                    onFocus={() => onFocusChangeLN(true)}
+                    onBlur={() => onFocusChangeLN(false)}
             />
          
           
@@ -119,9 +165,14 @@ export const Contact = () => {
                     required={true}
                     value={Email} 
                     onChange={(e) => handleEmailChange(e)}
-                    style={{...styles.inputsStyle, border: onEmail ? '1px solid black': '1px solid #E5E4E2'}}
+                    style={{...styles.inputsStyle, 
+                      border: onEmail ? '1px solid black': '1px solid #E5E4E2',
+                      backgroundColor: onFocusEmail ? '#FAFFE8' : 'white',
+                  }}
                     onMouseEnter={() => changeBorderColorE(true)}
                     onMouseOut={() => changeBorderColorE(false)}
+                    onFocus={() => onFocusChangeEmail(true)}
+                    onBlur={() => onFocusChangeEmail(false)}
 
             />
          
@@ -131,9 +182,14 @@ export const Contact = () => {
                     placeholder='Phone Number'
                     value={PhoneNum} 
                     onChange={(e) => handlePhoneChange(e)}
-                    style={{...styles.inputsStyle, border: onPhone ? '1px solid black': '1px solid #E5E4E2'}}
+                    style={{...styles.inputsStyle, 
+                      border: onPhone ? '1px solid black': '1px solid #E5E4E2',
+                      backgroundColor: onFocusPhone ? '#FAFFE8' : 'white'
+                    }}
                     onMouseEnter={() => changeBorderColorP(true)}
                     onMouseOut={() => changeBorderColorP(false)}
+                    onFocus={() => onFocusChangePhone(true)}
+                    onBlur={() => onFocusChangePhone(false)}
             />
           
       
@@ -142,9 +198,14 @@ export const Contact = () => {
                     placeholder='Subject'
                     value={undefined} 
                     onChange={undefined}
-                    style={{...styles.inputsStyle, border: onSubject ? '1px solid black': '1px solid #E5E4E2'}}
+                    style={{...styles.inputsStyle, 
+                      border: onSubject ? '1px solid black': '1px solid #E5E4E2',
+                      backgroundColor: onFocusSubject ? '#FAFFE8' : 'white'
+                    }}
                     onMouseEnter={() => changeBorderColorS(true)}
                     onMouseOut={() => changeBorderColorS(false)}
+                    onFocus={() => onFocusChangeSubject(true)}
+                    onBlur={() => onFocusChangeSubject(false)}
             />
        
            
@@ -157,9 +218,14 @@ export const Contact = () => {
                     maxLength={250}
                     value={undefined} 
                     onChange={undefined}
-                    style={{...styles.inputTextareaStyle, border: onContent ? '1px solid black': '1px solid #E5E4E2'}}
+                    style={{...styles.inputTextareaStyle, 
+                      border: onContent ? '1px solid black': '1px solid #E5E4E2',
+                      backgroundColor: onFocusContent ? '#FAFFE8' : 'white',
+                    }}
                     onMouseEnter={() => changeBorderColorC(true)}
                     onMouseOut={() => changeBorderColorC(false)}
+                    onFocus={() => onFocusChangeContent(true)}
+                    onBlur={() => onFocusChangeContent(false)}
             />
           
             <input style={styles.submitButton} type={'submit'} value='Send' />
@@ -184,23 +250,27 @@ const styles = {
 
   inputsGuide: {
     alignSelf: 'center',
-    marginLeft: '5%',
-    marginRight: '5%',
+    // marginLeft: '5%',
+    // marginRight: '5%',
+    alignItems: 'center',
+    
   },
 
   inputsContainer:{
     display: 'flex',
     flexDirection: 'column',
-    border: '1px solid black',
+    // border: '1px solid black',
     maxWidth: '800px',
     width: '50%',
-    padding: '5vh'
+    padding: '5vh',
+    backgroundColor: '#C8D8E4',
   },
 
   inputsStyle: {
     height: '5vh',  
     outline: 'none',
     fontSize: '20px',
+    marginTop: '3px',
   },
 
   inputTextareaStyle: {
@@ -208,7 +278,8 @@ const styles = {
     width: '98.4%',
     outline: 'none',
     fontSize: '20px',
-    resize: 'vertical'
+    resize: 'vertical',
+    marginTop: '3px'
   },
 
   labelsStyle: {
@@ -216,9 +287,11 @@ const styles = {
   },
 
   headLineContainer: {
-    border: '1px solid black',
-    marginLeft: '5vh',
-    marginTop: '10vh',
+    // border: '1px solid black',
+    // marginLeft: '5vh',
+    // marginTop: '10vh',
+    marginLeft: '6vw',
+    alignSelf: 'center'
   },
 
   headLine: {
@@ -231,13 +304,14 @@ const styles = {
     height: '5vh',
     minWidth: '200px',
     
-    backgroundColor: '#E5E4E2',
+    backgroundColor: '#52AB98',
     fontSize: '20px',
-    outline: 'none',
+    // outline: 'none',
+    border: '1px solid #52AB98',
     cursor: 'pointer',
 
     
-  }
+  },
 
 
 }

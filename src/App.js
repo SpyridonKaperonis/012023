@@ -44,8 +44,7 @@ const styles = {
   Container:{
     display: "flex", 
     flexDirection: "column",
-    borderWidth: '4px',
-    borderColor: 'black',
+
   },
  
   ParentContainer: {
@@ -64,7 +63,7 @@ const styles = {
     width: '10%',
     minWidth: '145px',
     height: '100%',
-    backgroundColor: '#E5E4E2',
+    // backgroundColor: '#E5E4E2',
     borderRight: '2px solid white',
     zIndex: '1'
     // backgroundColor: 'lightyellow', 
@@ -77,22 +76,22 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     position: 'fixed',
-    height: '93%',
-    width: '86%',
+    height: '94%',
+    width: '87%',
     overflow: 'scroll',
     overflowY :'auto',
     overflowX:'auto',
-    marginTop: '1vh',
-    marginBottom: '2vh',
+    marginTop: '0.5%',
+    marginBottom: '0.5%',
     marginLeft: '10.5%',
-    marginRight: '1.4vh',
+    marginRight: '0.5%',
 
     justifyContent: 'center',
 
-    backgroundColor: '#f0f0f0',
+    backgroundColor: 'white',
 
     padding:'2vh',
-    border: '2px solid blue',
+    // border: '2px solid blue',
     zIndex: '0'
   },
 

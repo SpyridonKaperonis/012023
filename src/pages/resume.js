@@ -105,7 +105,7 @@ export const Resume = () => {
     <div style={styles.container}>
       <div style={styles.controlBar}>
         <div style={styles.subSections}>
-          <div 
+          <div  
             onClick={() => {
               setScale(zoomScale + 0.2)
               setPlusButton(!plusButton)

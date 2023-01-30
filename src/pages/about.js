@@ -2,7 +2,7 @@ import React from 'react'
 import { ParagraphAbout } from '../components/paragraphAbout'
 
 
-import { LoadImage } from '../components/loadImage'
+import { LoadProfileImage } from '../components/loadImage'
 
 import { NameHeadline } from '../components/nameHealine'
 
@@ -23,11 +23,8 @@ export const About = () => {
     <div>
       <div style={styles.container}>
         <NameHeadline name={'Spyrion Kaperonis'} />
-        <LoadImage 
-          style={styles.image}
-          source={'/src/images/image14.png'}
-          alt_={'Spyridon Kaperonis'}
-        />
+        <LoadProfileImage style={styles.image} alt='Spyridon Kaperonis'/>
+        
         </div>
         <div>
           <ParagraphAbout text={aboutParagraphs.one}/>
@@ -56,7 +53,7 @@ const styles = {
   },
 
   image:{
-    width: '40px',
-    height: '40px',
+    width: '400px',
+    height: '400px',
   }
 }
