@@ -67,9 +67,9 @@ export const NavBar = (props) => {
                     to={'/projects'} 
                     style={useLocation().pathname==='/projects' ? styles.sideBarButtonClicked : styles.sideBarButton}>Projects</Link>
                 
-                <Link 
+                {/* <Link 
                     to={'/contact'} 
-                    style={useLocation().pathname==='/contact' ? styles.sideBarButtonClicked : styles.sideBarButton}>Contact</Link>
+                    style={useLocation().pathname==='/contact' ? styles.sideBarButtonClicked : styles.sideBarButton}>Contact</Link> */}
             
             </nav>
         </div>
@@ -91,7 +91,7 @@ const styles = {
         borderWidth: '4px',
         borderColor: 'black',
         justifyContent: 'space-between',
-    
+        backgroundColor: '#2B6777'
     },
 
     dateContainer:{
@@ -100,8 +100,9 @@ const styles = {
    
         justifyContent: 'center',
         margin: '1vh',
-        fontSize: '2vh 2vw',
-        backgroundColor: '#E5E4E2',
+        fontSize: '20px',
+        color: '#ffffff',
+        backgroundColor: 'transparent',
     },
 
     dateSpace: {
@@ -120,10 +121,11 @@ const styles = {
         justifyContent: 'center',
         padding: '3vh',
         marginTop: '1.5vh',
-        backgroundColor: '#E5E4E2',
+        // backgroundColor: '#C8D8E4',
         fontWeight: 'bold',
+        backgroundColor: '#52AB98',
         fontSize: '110%',
-        color: 'black',
+        color: '#FFFFFF',
         textDecoration: 'none'
     },
 
@@ -133,7 +135,8 @@ const styles = {
         justifyContent: 'center',
         padding: '3vh',
         marginTop: '1.5vh',
-        backgroundColor: 'white',
+        backgroundColor: '#C8D8E4',
+    
         fontWeight: 'bold',
         fontSize: '115%',
         color: 'black',

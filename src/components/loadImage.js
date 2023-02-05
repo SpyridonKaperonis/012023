@@ -1,14 +1,13 @@
 import React from 'react'
 
-export const LoadImage = (props) => {
-    const source_ = props.source;
+export const LoadProfileImage = (props) => {
     const alt_ = props.alt_;
-    const style = props.style;
+    const img_style = props.style;
 
   return (
     <nav>
-    <div style={{width: '100%', height: '100%'}}>
-      <img style={style} src={source_} alt={alt_}/>
+    <div>
+      <img src={require('../images/skimage.jpg')} style={img_style} alt={alt_} />
     </div>
     </nav>
   );

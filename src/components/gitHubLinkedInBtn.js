@@ -21,14 +21,14 @@ export const GitHubLinkedInBtn = () => {
   return (
     <>
        
-        <BsGithub size={'70px'} style={{...styles.GIcon, backgroundColor: GisOn ? 'white' : ''}} onClick={ () => navigateToGitHub()}
+        <BsGithub size={'70px'} style={{...styles.GIcon, backgroundColor: GisOn ? '#333' : ''}} onClick={ () => navigateToGitHub()}
         onMouseOver={() => setGIsOn(true)} onMouseOut={() => setGIsOn(false)}
         
         
         />
         
       
-        <BsLinkedin size={'70px'} style={{...styles.LIcon, backgroundColor: LisOn ? 'white' : ''}} onClick={() => navigateToLinkedIn()}
+        <BsLinkedin size={'70px'} style={{...styles.LIcon, backgroundColor: LisOn ? '#0072B1' : ''}} onClick={() => navigateToLinkedIn()}
         onMouseOver={() => setLIsOn(true)} onMouseOut={() => setLIsOn(false)}
         />
 
@@ -40,12 +40,14 @@ export const GitHubLinkedInBtn = () => {
 const styles = {
     GIcon: {
         padding: '13%',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        color: 'white'
       
     },
     LIcon: {
         padding: '13%',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        color: 'white',
   
     },
 }

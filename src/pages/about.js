@@ -55,5 +55,6 @@ const styles = {
   image:{
     width: '400px',
     height: '400px',
+    borderRadius: '200px'
   }
 }
