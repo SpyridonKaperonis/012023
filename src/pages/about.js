@@ -22,7 +22,7 @@ export const About = () => {
   
     <div>
       <div style={styles.container}>
-        <NameHeadline name={'Spyrion Kaperonis'} />
+        <NameHeadline name={'Spyridon Kaperonis'} />
         <LoadProfileImage style={styles.image} alt='Spyridon Kaperonis'/>
         
         </div>
