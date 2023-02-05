@@ -94,7 +94,7 @@ export const Resume = () => {
         <Page 
           scale={zoomScale} 
           pageNumber={pageNumber}
-          
+          renderTextLayer={false}
           /> 
       </Document>
       </>
