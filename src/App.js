@@ -1,4 +1,6 @@
 import './App.css';
+
+import React, {useEffect, useState} from 'react';
 import  {NavBar} from './components/navBar';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -9,7 +11,26 @@ import { Projects } from './pages/projects';
 import { Footer } from './components/footer';
 import { Contact } from './pages/contact';
 
+
 export default function App() {
+
+  const [width, setWindowWidth] = useState(0);
+
+
+  useEffect( () => {
+
+    updateDimensions();
+  
+    window.addEventListener("resize", updateDimensions);
+
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, [])
+
+  const updateDimensions = () => {
+    const width = window.innerWidth
+    setWindowWidth(width);
+  }
+
 
   const DateTime = new Date();
 
@@ -48,8 +69,8 @@ const styles = {
   },
  
   ParentContainer: {
-    display: 'flex',
-    flexDirection: 'column',
+    // display: 'flex',
+    // flexDirection: 'column',
     width: '100%',
     height: '100%',
     position: 'relative',
@@ -86,13 +107,14 @@ const styles = {
     marginLeft: '10.5%',
     marginRight: '0.5%',
 
-    justifyContent: 'center',
+    alignItems: 'center',
+    // justifyContent: 'center',
 
     backgroundColor: 'white',
 
     padding:'2vh',
     // border: '2px solid blue',
-    zIndex: '0'
+    // zIndex: '0'
   },
 
   ScrollView: {

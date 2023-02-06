@@ -87,13 +87,17 @@ export const Resume = () => {
       <>
       <Document 
         file={pdf_}
+        renderMode={"canvas"}
+        externalLinkRel={"_self"}
         options={{ workerSrc: "/pdf.worker.js" }} 
         onLoadSuccess={onDocumentLoadSuccess}
         onItemClick={({ dest, pageIndex, pageNumber }) => alert('Clicked an item from page ' + pageNumber + '!')}
         >
-        <Page 
+        <Page
+       
           scale={zoomScale} 
           pageNumber={pageNumber}
+          devicePixelRatio={1}
           renderTextLayer={false}
           /> 
       </Document>
@@ -107,7 +111,14 @@ export const Resume = () => {
         <div style={styles.subSections}>
           <div  
             onClick={() => {
-              setScale(zoomScale + 0.2)
+
+              if (zoomScale + 0.2 > 2.5){
+                console.log('ZoomScale exceeds 2.5')
+              }
+              else{
+                setScale(zoomScale + 0.2)
+              }
+              
               setPlusButton(!plusButton)
               setTimeout(() => {
                 setPlusButton(false)
@@ -127,7 +138,7 @@ export const Resume = () => {
         </div>
 
         <div style={styles.subSections}>
-          <div 
+          {/* <div 
             onClick={() => {
               previousPage()
             
@@ -147,7 +158,7 @@ export const Resume = () => {
               }
             
             } 
-            style={{...styles.aRef, backgroundColor: nextButton ? '#ffbd03' : 'white'}}>{'>'}</div>
+            style={{...styles.aRef, backgroundColor: nextButton ? '#ffbd03' : 'white'}}>{'>'}</div> */}
         </div>
         <div style={styles.subSections}>
           <a href={"javascript:void(0)"} 
@@ -175,7 +186,10 @@ export const Resume = () => {
 
 const styles = {
   container: {
-    position: 'relative',
+    // display: 'flex',
+    // flexDirection: 'column',
+    alighItems: 'center',
+    justifyContent: 'center',
     // width: '100%', 
     // height: '100%',
     // display: 'flex',
@@ -187,8 +201,9 @@ const styles = {
   controlBar: {
     display: 'flex',
     flexDirection: 'row',
-    width: '100%',
-    height: '10%',
+
+    width: '80vw',
+    height: '6vh',
     border: '0.2px solid black',
     padding: '0.2vh', 
     justifyContent: 'space-between',
@@ -242,3 +257,6 @@ const styles = {
     webkitBackgroundClip: 'text',
   }
 }
+
+
+export default React.memo(Resume.MyPDF)
