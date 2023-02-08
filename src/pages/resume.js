@@ -12,7 +12,7 @@ import pdf_ from './pdf/Spyridon_Kaperonis_Resume_Simple.pdf';
 export const Resume = () => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
-  const [zoomScale, setScale] = useState(2.6);
+  const [zoomScale, setScale] = useState(2.3);
   const [pageInputValue, setpageInputValue] = useState();
   const [plusButton, setPlusButton] = useState(false);
   const [minusButton, setMinutButton] = useState(false);
