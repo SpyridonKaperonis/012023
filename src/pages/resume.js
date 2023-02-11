@@ -3,7 +3,7 @@ import { getValue } from '@testing-library/user-event/dist/utils';
 import React, {useState, useEffect, useRef} from 'react';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
 
-import pdf_ from './pdf/Spyridon_Kaperonis_Resume_Simple.pdf';
+import pdf_ from '../pdf/resume.pdf';
 
 export const Resume = () => {
   const [numPages, setNumPages] = useState(null);
