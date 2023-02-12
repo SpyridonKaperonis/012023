@@ -1,20 +1,23 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { getValue } from '@testing-library/user-event/dist/utils';
+// import { getValue } from '@testing-library/user-event/dist/utils';
 import React, {useState, useEffect, useRef} from 'react';
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
+// import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
 
 import pdf_ from '../pdf/resume.pdf';
+
+
+
 
 export const Resume = () => {
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
-  const [zoomScale, setScale] = useState(2.3);
-  const [pageInputValue, setpageInputValue] = useState();
-  const [plusButton, setPlusButton] = useState(false);
-  const [minusButton, setMinutButton] = useState(false);
+  // const [zoomScale, setScale] = useState(2.3);
+  // const [pageInputValue, setpageInputValue] = useState();
+  // const [plusButton, setPlusButton] = useState(false);
+  // const [minusButton, setMinutButton] = useState(false);
   const [nextButton, setNextButton] = useState(false);
   const [backButton, setBackButton] = useState(false);
-  const [downloadButton, setDownloadButton] = useState(false);
+  // const [downloadButton, setDownloadButton] = useState(false);
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
@@ -55,6 +58,16 @@ export const Resume = () => {
     
   }
 
+  const RenderResume = () => {
+
+
+    return (
+      <div style={styles.resume}>
+        <a style={styles.resumeA} href={pdf_} target="_blank">RESUME</a>
+      </div>
+    )
+  }
+
   // const ViewerPDF = () => {
 
   //   const [page, setPage] = useState(1);
@@ -77,121 +90,140 @@ export const Resume = () => {
   //     );
   //   }
 
-  const MyPDF = () => {
+  // const MyPDF = () => {
   
-    return(
-      <>
-      <Document 
-        file={pdf_}
-        renderMode={"canvas"}
-        externalLinkRel={"_self"}
-        options={{ workerSrc: "/pdf.worker.js" }} 
-        onLoadSuccess={onDocumentLoadSuccess}
-        onItemClick={({ dest, pageIndex, pageNumber }) => alert('Clicked an item from page ' + pageNumber + '!')}
-        >
-        <Page
+  //   return(
+  //     <>
+  //     <Document 
+  //       file={pdf_}
+  //       renderMode={"canvas"}
+  //       externalLinkRel={"_self"}
+  //       options={{ workerSrc: "/pdf.worker.js" }} 
+  //       onLoadSuccess={onDocumentLoadSuccess}
+  //       onItemClick={({ dest, pageIndex, pageNumber }) => alert('Clicked an item from page ' + pageNumber + '!')}
+  //       >
+  //       <Page
        
-          scale={zoomScale} 
-          pageNumber={pageNumber}
-          devicePixelRatio={1}
-          renderTextLayer={false}
-          /> 
-      </Document>
-      </>
-    )
-  }
+  //         scale={zoomScale} 
+  //         pageNumber={pageNumber}
+  //         devicePixelRatio={1}
+  //         renderTextLayer={false}
+  //         /> 
+  //     </Document>
+  //     </>
+  //   )
+  // }
 
   return (
     <div style={styles.container}>
-      <div style={styles.controlBar}>
-        <div style={styles.subSections}>
-          <div  
-            onClick={() => {
-
-              if (zoomScale + 0.2 > 2.5){
-                console.log('ZoomScale exceeds 2.5')
-              }
-              else{
-                setScale(zoomScale + 0.2)
-              }
-              
-              setPlusButton(!plusButton)
-              setTimeout(() => {
-                setPlusButton(false)
-              }, 400)}} 
-            style={{...styles.aRef, backgroundColor: plusButton ? '#ffbd03' : 'white'}}>+</div>
-
-
-          <div
-            onClick={() => {
-              setScale(zoomScale - 0.2)
-              setMinutButton(!minusButton)
-              setTimeout(() => {
-                setMinutButton(false)
-              }, 400)}} 
-            style={{...styles.aRef, backgroundColor: minusButton ? '#ffbd03' : 'white', marginLeft: '0.6vh'}}>-</div>
-        
-        </div>
-
-        <div style={styles.subSections}>
-          {/* <div 
-            onClick={() => {
-              previousPage()
-            
-            }} style={{...styles.aRef, backgroundColor: backButton ? '#ffbd03' : 'white'}}>{'<'}</div>
-          <p style={{
-              fontSize: '2vh',
-              marginRight: '2vh',
-              marginLeft: '2vh',
-              }}>
-
-          {pageNumber} of {numPages}
-        </p>
-
-         <div
-            onClick={() => {
-              nextPage()
-              }
-            
-            } 
-            style={{...styles.aRef, backgroundColor: nextButton ? '#ffbd03' : 'white'}}>{'>'}</div> */}
-        </div>
-        <div style={styles.subSections}>
-          <a href={"javascript:void(0)"} 
-            onClick={() => {
-              setDownloadButton(!downloadButton);
-              setTimeout(() => {
-                setDownloadButton(false);
-              }, 900)
-              downloadPdf(pdf_, 'Spyridon_Kaperonis_Resume.pdf')
-              
-              }} style={{...styles.aRef, backgroundColor: downloadButton ? '#ffbd03' : 'white'}}>Download</a>
-        </div>
-      </div>
-
-      <div style={styles.pdfStyle}>
-        {/* <ViewerPDF/> */}
-        <MyPDF />
-        <p>
-          Page {pageNumber} of {numPages}
-        </p>
-      </div>
+     <RenderResume/>
     </div>
-  );
+    // <div style={styles.container}>
+    //   <div style={styles.controlBar}>
+    //     <div style={styles.subSections}>
+    //       <div  
+    //         onClick={() => {
+
+    //           if (zoomScale + 0.2 > 2.5){
+    //             console.log('ZoomScale exceeds 2.5')
+    //           }
+    //           else{
+    //             setScale(zoomScale + 0.2)
+    //           }
+              
+    //           setPlusButton(!plusButton)
+    //           setTimeout(() => {
+    //             setPlusButton(false)
+    //           }, 400)}} 
+    //         style={{...styles.aRef, backgroundColor: plusButton ? '#ffbd03' : 'white'}}>+</div>
+
+
+    //       <div
+    //         onClick={() => {
+    //           setScale(zoomScale - 0.2)
+    //           setMinutButton(!minusButton)
+    //           setTimeout(() => {
+    //             setMinutButton(false)
+    //           }, 400)}} 
+    //         style={{...styles.aRef, backgroundColor: minusButton ? '#ffbd03' : 'white', marginLeft: '0.6vh'}}>-</div>
+        
+    //     </div>
+
+    //     <div style={styles.subSections}>
+    //       {/* <div 
+    //         onClick={() => {
+    //           previousPage()
+            
+    //         }} style={{...styles.aRef, backgroundColor: backButton ? '#ffbd03' : 'white'}}>{'<'}</div>
+    //       <p style={{
+    //           fontSize: '2vh',
+    //           marginRight: '2vh',
+    //           marginLeft: '2vh',
+    //           }}>
+
+    //       {pageNumber} of {numPages}
+    //     </p>
+
+    //      <div
+    //         onClick={() => {
+    //           nextPage()
+    //           }
+            
+    //         } 
+    //         style={{...styles.aRef, backgroundColor: nextButton ? '#ffbd03' : 'white'}}>{'>'}</div> */}
+    //     </div>
+    //     <div style={styles.subSections}>
+    //       <a href={pdf_}>Click me</a>
+    //       <a href={"javascript:void(0)"} 
+    //         onClick={() => {
+    //           setDownloadButton(!downloadButton);
+    //           setTimeout(() => {
+    //             setDownloadButton(false);
+    //           }, 900)
+    //           downloadPdf(pdf_, 'Spyridon_Kaperonis_Resume.pdf')
+              
+    //           }} style={{...styles.aRef, backgroundColor: downloadButton ? '#ffbd03' : 'white'}}>Download</a>
+    //     </div>
+    //   </div>
+
+    //   <div style={styles.pdfStyle}>
+    //     {/* <ViewerPDF/> */}
+    //     <MyPDF />
+    //     <p>
+    //       Page {pageNumber} of {numPages}
+    //     </p>
+    //   </div>
+    // </div>
+  )
 }
 
 const styles = {
   container: {
-    // display: 'flex',
-    // flexDirection: 'column',
+    display: 'flex',
+    flexDirection: 'column',
     alighItems: 'center',
     justifyContent: 'center',
-    // width: '100%', 
-    // height: '100%',
+    width: '100%', 
+    height: '100%',
+   
     // display: 'flex',
     // flexDirection: 'column',
     // justifyContent: 'center',
     // alighItems: 'center',
+  },
+
+  resume:{
+    border: '1px solid brown',
+    alignSelf: 'center',
+    padding: '10vh',
+    backgroundCOlor: 'blue',
+  },
+
+  resumeA: {
+    textDecoration: 'none',
+    fontWeight: 'bold',
+    fontSize: '2.5vh',
+    color: 'black',
   },
 
   controlBar: {
@@ -251,7 +283,9 @@ const styles = {
   pdfStyleNew:{
     background: 'linear-gradient(75deg, #3B43F2, #3B8CF2)', 
     webkitBackgroundClip: 'text',
-  }
+  },
+
+  
 }
 
 
