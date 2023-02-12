@@ -11,7 +11,7 @@ export const Projects = () => {
     <>
     <div>
       <div>
-        <h1 style={{marginLeft: '3vh'}}>Most Recent</h1>
+        <h1 style={{marginLeft: '3vh'}}></h1>
       </div>
       <div style={styles.cardsContainer}>
         <div style={styles.card}>
@@ -21,7 +21,7 @@ export const Projects = () => {
                 to recognize sign language letters.  
                 <li>Convolution Neural Network</li>
                 <li>Support Vector Machine</li>
-                <lI>k-Nearest Neighbors</lI>
+                <li>k-Nearest Neighbors</li>
               </p>}
               image={hand}
               image_={true}
@@ -46,7 +46,7 @@ export const Projects = () => {
             <GithubCard
               title={'Satellite Road Extraction'}
               text={<p>Using deep learning algorithm to recognize roads on satellite imagery.
-                <li>Auto Encoder</li>
+                <li>Generative Auto Encoder</li>
               </p>}
               image={roadExtraction}
               image_={true}
@@ -57,7 +57,9 @@ export const Projects = () => {
       <div style={styles.card}> 
           <GithubCard
             title={'Textbook Service System'}
-            text={'Description'}
+            text={<p>This was the final project for my Bachelor's degree. Within an agile team of 8 students we created a check in check out System for the Student 
+              service of the university. The application is initially developed to renew the existing software the Student Service have. 
+            </p>}
             image_={false}
             link={'https://github.com/SpyridonKaperonis/TextBookServices'}
             />
@@ -65,10 +67,16 @@ export const Projects = () => {
       </div>
       <div style={styles.card}>
         <GithubCard
-          title={'tennis Social Network'}
-          text={'Description'}
+          title={'Tennis Social Network'}
           image_={false}
+          text={<p>A mobile application with purpose to connect people. Designed the front end, database and back end. The app serves three sides. There are the players
+            , coaches and clubs. 
+            <li>NodeJs</li>
+            <li>React Native</li>
+            <li>ExpressJs</li>
+            <li>MySql</li>
 
+          </p>}
           />
       </div>
     </div>
@@ -85,8 +93,8 @@ const styles = {
   card:{
     display: 'flex', 
     flexDirection: 'column', 
-    margin: '1vh',
-    padding: '0.5vh',
+    margin: '1vw',
+    padding: '0.3vh',
     backgroundColor: '#C8D8E4'
   }, 
 
