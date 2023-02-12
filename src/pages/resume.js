@@ -9,62 +9,62 @@ import pdf_ from '../pdf/resume.pdf';
 
 
 export const Resume = () => {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-  // const [zoomScale, setScale] = useState(2.3);
-  // const [pageInputValue, setpageInputValue] = useState();
-  // const [plusButton, setPlusButton] = useState(false);
-  // const [minusButton, setMinutButton] = useState(false);
-  const [nextButton, setNextButton] = useState(false);
-  const [backButton, setBackButton] = useState(false);
-  // const [downloadButton, setDownloadButton] = useState(false);
+  // const [numPages, setNumPages] = useState(null);
+  // const [pageNumber, setPageNumber] = useState(1);
+  // // const [zoomScale, setScale] = useState(2.3);
+  // // const [pageInputValue, setpageInputValue] = useState();
+  // // const [plusButton, setPlusButton] = useState(false);
+  // // const [minusButton, setMinutButton] = useState(false);
+  // const [nextButton, setNextButton] = useState(false);
+  // const [backButton, setBackButton] = useState(false);
+  // // const [downloadButton, setDownloadButton] = useState(false);
 
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
+  // function onDocumentLoadSuccess({ numPages }) {
+  //   setNumPages(numPages);
+  // }
 
-  function nextPage(){
-    if(numPages>1){
-      setPageNumber(pageNumber +1)
-    }
-    setNextButton(!nextButton)
-    setTimeout(() => {
-      setNextButton(false)
-      }, 400)
-  }
+  // function nextPage(){
+  //   if(numPages>1){
+  //     setPageNumber(pageNumber +1)
+  //   }
+  //   setNextButton(!nextButton)
+  //   setTimeout(() => {
+  //     setNextButton(false)
+  //     }, 400)
+  // }
 
-  function previousPage(){
-    if(numPages>1){
-      setBackButton(!backButton)
-    }
-    setBackButton(!backButton)
-    setTimeout(() => {
-      setBackButton(false)
-    }, 400)
-  }
+  // function previousPage(){
+  //   if(numPages>1){
+  //     setBackButton(!backButton)
+  //   }
+  //   setBackButton(!backButton)
+  //   setTimeout(() => {
+  //     setBackButton(false)
+  //   }, 400)
+  // }
 
-  function downloadPdf(url, filename){
-    fetch(url, {method: 'get', mode: 'no-cors', referrerPolicy: 'no-referrer'})
-    .then(res => res.blob())
-    .then(res => {
-      const element = document.createElement('a');
-      element.setAttribute('download', filename);
-      const href = URL.createObjectURL(res);
-      element.href = href;
-      element.setAttribute('target', '_blank');
-      element.click();
-      URL.revokeObjectURL(href);
-    })
+  // function downloadPdf(url, filename){
+  //   fetch(url, {method: 'get', mode: 'no-cors', referrerPolicy: 'no-referrer'})
+  //   .then(res => res.blob())
+  //   .then(res => {
+  //     const element = document.createElement('a');
+  //     element.setAttribute('download', filename);
+  //     const href = URL.createObjectURL(res);
+  //     element.href = href;
+  //     element.setAttribute('target', '_blank');
+  //     element.click();
+  //     URL.revokeObjectURL(href);
+  //   })
     
-  }
+  // }
 
   const RenderResume = () => {
 
 
     return (
-      <div style={styles.resume}>
+
         <a style={styles.resumeA} href={pdf_} target="_blank">RESUME</a>
-      </div>
+
     )
   }
 
@@ -212,19 +212,14 @@ const styles = {
     // alighItems: 'center',
   },
 
-  resume:{
-    
-    alignSelf: 'center',
-    padding: '10vh',
-    backgroundColor: '#52AB98',
-    cursor: 'pointer',
-  },
-
   resumeA: {
+    alignSelf:'center',
     textDecoration: 'none',
     fontWeight: 'bold',
     fontSize: '2.5vh',
     padding: '10vh',
+    backgroundColor: '#52AB98',
+    cursor: 'pointer',
     color: 'black',
   },
 
