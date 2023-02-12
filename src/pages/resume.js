@@ -213,16 +213,18 @@ const styles = {
   },
 
   resume:{
-    border: '1px solid brown',
+    
     alignSelf: 'center',
     padding: '10vh',
-    backgroundCOlor: 'blue',
+    backgroundColor: '#52AB98',
+    cursor: 'pointer',
   },
 
   resumeA: {
     textDecoration: 'none',
     fontWeight: 'bold',
     fontSize: '2.5vh',
+    padding: '10vh',
     color: 'black',
   },
 
