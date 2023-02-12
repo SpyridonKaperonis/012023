@@ -14,7 +14,7 @@ export const GitHubLinkedInBtn = () => {
         window.open('https://github.com/SpyridonKaperonis')
     }
     const navigateToLinkedIn = () => {
-        window.open('https://www.linkedin.com')
+        window.open('https://www.linkedin.com/in/spyridon-kaperonis-58656819b/')
     }
 
     
