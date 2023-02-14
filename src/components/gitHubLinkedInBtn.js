@@ -1,4 +1,3 @@
-import { setSelectionRange } from '@testing-library/user-event/dist/utils';
 import React, { useState } from 'react'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom';

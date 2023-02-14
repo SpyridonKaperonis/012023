@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 // import { getValue } from '@testing-library/user-event/dist/utils';
-import React, {useState, useEffect, useRef} from 'react';
+import React from 'react';
 // import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
 
 import pdf_ from '../pdf/resume.pdf';

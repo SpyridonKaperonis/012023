@@ -69,6 +69,7 @@ export const Projects = () => {
         <GithubCard
           title={'Tennis Social Network'}
           image_={false}
+          link={'https://github.com/Tennis-management-service/tcr-mobile'}
           text={<p>A mobile application with purpose to connect people. Designed the front end, database and back end. The app serves three sides. There are the players
             , coaches and clubs. 
             <li>NodeJs</li>
