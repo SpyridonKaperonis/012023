@@ -63,7 +63,7 @@ export const Resume = () => {
 
     return (
 
-        <a style={styles.resumeA} href={pdf_} target="_blank">RESUME</a>
+        <a style={styles.resumeA} href={pdf_} target="_blank" filename="spyridon.pdf" media='Spyridon.pdf' rel='noreferrer' >RESUME</a>
 
     )
   }
