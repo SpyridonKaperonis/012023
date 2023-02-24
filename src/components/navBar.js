@@ -52,9 +52,9 @@ export const NavBar = (props) => {
             <h3 style={styles.dateSpace}>{newDate.year}</h3>
         </div>
 
-        <div style={styles.message}>
+        {/* <div style={styles.message}>
             <h3 style={{...styles.dateSpace, color: 'yellow'}}>Please excuse some inconsistencies. The website is under development.</h3>
-        </div>
+        </div> */}
 
         <div style={styles.buttonsContainer}>
             <nav>
@@ -111,7 +111,7 @@ const styles = {
 
     dateSpace: {
         padding: '3px',
-        fontSize: '90%'
+        fontSize: '20px'
     },   
 
     buttonsContainer: {
