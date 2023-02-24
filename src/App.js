@@ -99,14 +99,11 @@ const styles = {
   },
 
   scrollviewContainer: {
-    display: 'flex',
-    flexDirection: 'column',
+    display: 'block',
     position: 'relative',
-    height: '94%',
+    height: '100%',
     width: 'auto',
-    overflow: 'scroll',
-    overflowY :'auto',
-    overflowX:'auto',
+    overflow: 'auto',
     // marginTop: '0.5%',
     marginLeft: '180px',
     marginRight: '10px',
