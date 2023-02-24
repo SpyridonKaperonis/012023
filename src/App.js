@@ -10,6 +10,7 @@ import { Resume } from './pages/resume';
 import { Projects } from './pages/projects';
 import { Footer } from './components/footer';
 import { Contact } from './pages/contact';
+import { PdfRenderer } from './components/pdfRenderer';
 
 
 export default function App() {
@@ -47,14 +48,20 @@ export default function App() {
               <Route path='/resume' element={<Resume/>} />
               <Route path='/projects' element={<Projects/>} />
               {/* <Route path='/contact' element={<Contact/>} /> */}
+              {/* <Route path='/resume/SpyridonKaperonis' element={<PdfRenderer/>} /> */}
+  
             </Routes>
         </div>
         {/* <div>
         <Footer/>
         </div> */}
-     
+      
       </div>
+
+      
     </Router>
+
+
   );
 }
 
@@ -63,8 +70,7 @@ export default function App() {
 
 const styles = {
   Container:{
-    display: "flex", 
-    flexDirection: "column",
+    
 
   },
  
@@ -78,8 +84,7 @@ const styles = {
   },
 
   NavBar: {
-    display: 'flex',
-    flexDirection: 'column', 
+  
     position: 'fixed',
     width: '10%',
     minWidth: '145px',
@@ -104,7 +109,7 @@ const styles = {
     overflowX:'auto',
     marginTop: '0.5%',
     marginBottom: '0.5%',
-    marginLeft: '10.5%',
+    marginLeft: '200px',
     marginRight: '0.5%',
 
     alignItems: 'center',
