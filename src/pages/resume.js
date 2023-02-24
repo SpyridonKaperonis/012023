@@ -60,7 +60,9 @@ export const Resume = () => {
   const RenderResume = () => {
 
     return (
-        <a style={styles.resumeA} href={'/resume/SpyridonKaperonis'} target="_self" rel='noreferrer' >RESUME</a>
+
+        <a style={styles.resumeA} href={'/resume/SpyridonKaperonis'} target="_self" rel='noreferrer' >RESUME</a>        
+
 
     )
   }
