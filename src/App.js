@@ -10,6 +10,7 @@ import { Resume } from './pages/resume';
 import { Projects } from './pages/projects';
 import { Footer } from './components/footer';
 import { Contact } from './pages/contact';
+import { PdfRenderer } from './components/pdfRenderer';
 
 
 export default function App() {
@@ -47,14 +48,20 @@ export default function App() {
               <Route path='/resume' element={<Resume/>} />
               <Route path='/projects' element={<Projects/>} />
               {/* <Route path='/contact' element={<Contact/>} /> */}
+              {/* <Route path='/resume/SpyridonKaperonis' element={<PdfRenderer/>} /> */}
+  
             </Routes>
         </div>
         {/* <div>
         <Footer/>
         </div> */}
-     
+      
       </div>
+
+      
     </Router>
+
+
   );
 }
 
@@ -63,8 +70,7 @@ export default function App() {
 
 const styles = {
   Container:{
-    display: "flex", 
-    flexDirection: "column",
+    
 
   },
  
@@ -73,15 +79,14 @@ const styles = {
     // flexDirection: 'column',
     width: '100%',
     height: '100%',
-    position: 'relative',
+    position: 'fixed',
 
   },
 
   NavBar: {
-    display: 'flex',
-    flexDirection: 'column', 
+  
     position: 'fixed',
-    width: '10%',
+    width: '170px',
     minWidth: '145px',
     height: '100%',
     // backgroundColor: '#E5E4E2',
@@ -96,23 +101,21 @@ const styles = {
   scrollviewContainer: {
     display: 'flex',
     flexDirection: 'column',
-    position: 'fixed',
+    position: 'relative',
     height: '94%',
-    width: '87%',
+    width: 'auto',
     overflow: 'scroll',
     overflowY :'auto',
     overflowX:'auto',
-    marginTop: '0.5%',
-    marginBottom: '0.5%',
-    marginLeft: '10.5%',
-    marginRight: '0.5%',
+    // marginTop: '0.5%',
+    marginLeft: '180px',
+    marginRight: '10px',
 
     alignItems: 'center',
     // justifyContent: 'center',
 
     backgroundColor: 'white',
 
-    padding:'2vh',
     // border: '2px solid blue',
     // zIndex: '0'
   },

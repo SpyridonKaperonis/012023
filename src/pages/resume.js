@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-// import { getValue } from '@testing-library/user-event/dist/utils';
 import React from 'react';
+import { PdfRenderer } from '../components/pdfRenderer';
 // import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
+// import { getValue } from '@testing-library/user-event/dist/utils';
 
-import pdf_ from '../pdf/resume.pdf';
 
 
 
@@ -57,13 +57,12 @@ export const Resume = () => {
   //   })
     
   // }
-
   const RenderResume = () => {
-
 
     return (
 
-        <a style={styles.resumeA} href={pdf_} target="_blank" filename="spyridon.pdf" media='Spyridon.pdf' rel='noreferrer' >RESUME</a>
+        <a style={styles.resumeA} href={'/resume/SpyridonKaperonis'} target="_self" rel='noreferrer' >RESUME</a>        
+
 
     )
   }
@@ -116,7 +115,8 @@ export const Resume = () => {
 
   return (
     <div style={styles.container}>
-     <RenderResume/>
+     {/* <RenderResume/> */}
+     <PdfRenderer/>
     </div>
     // <div style={styles.container}>
     //   <div style={styles.controlBar}>

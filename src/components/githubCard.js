@@ -25,10 +25,10 @@ export const GithubCard = (props) => {
     <div style={styles.container} onClick={() => navigateToRepo(hyperlink)}>
     <Card style={{display: 'flex', flexDirection: 'column', 
                   justifyContent: 'space-between',  border: clicked ? '1px solid black' : ''}}>
-      {image_ ?  <Card.Img style={{height: '20vh', width: '1oo%'}} variant="top" src={image} /> : null}
+      {image_ ?  <Card.Img style={{height: '170px', width: '28vw'}} variant="top" src={image} /> : null}
       <Card.Body>
-        <Card.Title style={{margin: '1vh', fontWeight: 'bold', fontSize:'25px'}}>{title}</Card.Title>
-        <Card.Text style={{margin: '2vh', fontSize: '18px'}}>
+        <Card.Title style={{margin: '1vh', fontWeight: 'bold', fontSize:'20px'}}>{title}</Card.Title>
+        <Card.Text style={{margin: '30px', fontSize: '18px'}}>
           {text}
         </Card.Text>
         

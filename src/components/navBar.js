@@ -52,6 +52,10 @@ export const NavBar = (props) => {
             <h3 style={styles.dateSpace}>{newDate.year}</h3>
         </div>
 
+        {/* <div style={styles.message}>
+            <h3 style={{...styles.dateSpace, color: 'yellow'}}>Please excuse some inconsistencies. The website is under development.</h3>
+        </div> */}
+
         <div style={styles.buttonsContainer}>
             <nav>
                
@@ -100,14 +104,14 @@ const styles = {
    
         justifyContent: 'center',
         margin: '1vh',
-        fontSize: '20px',
+        fontSize: '2vh',
         color: '#ffffff',
         backgroundColor: 'transparent',
     },
 
     dateSpace: {
         padding: '3px',
-        fontSize: '90%'
+        fontSize: '20px'
     },   
 
     buttonsContainer: {
@@ -119,12 +123,12 @@ const styles = {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        padding: '3vh',
+        padding: '2vh',
         marginTop: '1.5vh',
         // backgroundColor: '#C8D8E4',
         fontWeight: 'bold',
         backgroundColor: '#52AB98',
-        fontSize: '110%',
+        fontSize: '100%',
         color: '#FFFFFF',
         textDecoration: 'none'
     },
@@ -133,12 +137,12 @@ const styles = {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        padding: '3vh',
+        padding: '2vh',
         marginTop: '1.5vh',
         backgroundColor: '#C8D8E4',
     
         fontWeight: 'bold',
-        fontSize: '115%',
+        fontSize: '105%',
         color: 'black',
         textDecoration: 'none'
     },
@@ -153,6 +157,10 @@ const styles = {
     GLIcons: {
         padding: '3.4vh',
         border: '1px solid black',
+    },
+
+    message:{
+        justifyContent: 'center',
     },
 
 }

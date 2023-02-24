@@ -36,7 +36,9 @@ export const Projects = () => {
                 syntax, vocabulary, phraseology, grammar, and conventions. 
                 <li>LSTM</li>
                 <li>Neural Network</li>
-                <li>Support Vector Machine</li></p>}
+                <li>Support Vector Machine</li>
+                <li>Numpy, Pandas, nltk, Sklearn, Seaborn</li>
+                </p>}
               image={tree}
               image_={true}
               link={'https://github.com/SpyridonKaperonis/EnglishLanguageLearning'}
@@ -47,6 +49,8 @@ export const Projects = () => {
               title={'Satellite Road Extraction'}
               text={<p>Using deep learning algorithm to recognize roads on satellite imagery.
                 <li>Generative Auto Encoder</li>
+                <li>Pandas, Numpy, Seaborn, Matplotlib, Scipy, Keras, Skimage</li>
+                <li>Tensorflow</li>
               </p>}
               image={roadExtraction}
               image_={true}
@@ -59,6 +63,12 @@ export const Projects = () => {
             title={'Textbook Service System'}
             text={<p>This was the final project for my Bachelor's degree. Within an agile team of 8 students we created a check in check out System for the Student 
               service of the university. The application is initially developed to renew the existing software the Student Service have. 
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>JavaScript</li>
+                <li>Ejs</li>
+                <li>Oracle Database v19c</li>
+            
             </p>}
             image_={false}
             link={'https://github.com/SpyridonKaperonis/TextBookServices'}
@@ -94,7 +104,7 @@ const styles = {
   card:{
     display: 'flex', 
     flexDirection: 'column', 
-    margin: '1vw',
+    margin: '0.2vw',
     padding: '0.3vh',
     backgroundColor: '#C8D8E4'
   }, 
