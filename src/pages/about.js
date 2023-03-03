@@ -20,7 +20,7 @@ export const About = () => {
   return (
 
   
-    <div>
+    <div style={styles.container_}>
       <div style={styles.container}>
         
         <LoadProfileImage style={styles.image} div_style={{alignItems:'center'}} alt='Spyridon Kaperonis'/>
@@ -38,18 +38,23 @@ export const About = () => {
           <ParagraphAbout text={aboutParagraphs.five}/>
           
         </div> */}
-      </div>
- 
+    
+    </div>
   )
 }
 
 const styles = {
+  container_:{
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 
   container: {
-    displaye: 'flex',
+    display: 'flex',
     flexDirection: 'column',
-    // alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: 'center',
     marginTop: '100px',
   },
 
@@ -57,6 +62,5 @@ const styles = {
     width: '300px',
     height: '300px',
     borderRadius: '200px',
-    marginLeft: '45px'
   }
 }
