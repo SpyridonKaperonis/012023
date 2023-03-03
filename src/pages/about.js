@@ -22,11 +22,11 @@ export const About = () => {
   
     <div>
       <div style={styles.container}>
-        <NameHeadline name={'Spyridon Kaperonis'} />
-        <LoadProfileImage style={styles.image} alt='Spyridon Kaperonis'/>
         
+        <LoadProfileImage style={styles.image} div_style={{alignItems:'center'}} alt='Spyridon Kaperonis'/>
+        <NameHeadline name={'Spyridon Kaperonis'} />
         </div>
-        <div>
+        {/* <div>
           <ParagraphAbout text={aboutParagraphs.one}/>
         
           <ParagraphAbout text={aboutParagraphs.two}/>
@@ -37,7 +37,7 @@ export const About = () => {
 
           <ParagraphAbout text={aboutParagraphs.five}/>
           
-        </div>
+        </div> */}
       </div>
  
   )
@@ -48,13 +48,15 @@ const styles = {
   container: {
     displaye: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    // alignItems: 'center',
     justifyContent: 'center',
+    marginTop: '100px',
   },
 
   image:{
-    width: '400px',
-    height: '400px',
-    borderRadius: '200px'
+    width: '300px',
+    height: '300px',
+    borderRadius: '200px',
+    marginLeft: '45px'
   }
 }
