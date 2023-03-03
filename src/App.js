@@ -90,7 +90,7 @@ const styles = {
     minWidth: '145px',
     height: '100%',
     // backgroundColor: '#E5E4E2',
-    borderRight: '2px solid white',
+    // borderRight: '2px solid white',
     zIndex: '1'
     // backgroundColor: 'lightyellow', 
     // borderColor: 'black',
@@ -105,7 +105,7 @@ const styles = {
     width: 'auto',
     overflow: 'auto',
     // marginTop: '0.5%',
-    marginLeft: '180px',
+    marginLeft: '170px',
     marginRight: '10px',
 
     alignItems: 'center',
