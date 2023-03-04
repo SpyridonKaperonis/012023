@@ -12,9 +12,7 @@ export const ParagraphAbout = (props) => {
 
 const styles = {
     text:{
-        display: 'flex',
-        flexDirection: 'row',
         fontSize: '20px',
-        textIndent: '1vh',
+        textIndent: '10px',
     }
 };
