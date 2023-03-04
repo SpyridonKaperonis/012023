@@ -212,75 +212,75 @@ const styles = {
     // alighItems: 'center',
   },
 
-  resumeA: {
-    alignSelf:'center',
-    textDecoration: 'none',
-    fontWeight: 'bold',
-    fontSize: '2.5vh',
-    padding: '10vh',
-    backgroundColor: '#52AB98',
-    cursor: 'pointer',
-    color: 'black',
-  },
+  // resumeA: {
+  //   alignSelf:'center',
+  //   textDecoration: 'none',
+  //   fontWeight: 'bold',
+  //   fontSize: '2.5vh',
+  //   padding: '10vh',
+  //   backgroundColor: '#52AB98',
+  //   cursor: 'pointer',
+  //   color: 'black',
+  // },
 
-  controlBar: {
-    display: 'flex',
-    flexDirection: 'row',
+  // controlBar: {
+  //   display: 'flex',
+  //   flexDirection: 'row',
 
-    width: '80vw',
-    height: '6vh',
-    border: '0.2px solid black',
-    padding: '0.2vh', 
-    justifyContent: 'space-between',
-    backgroundColor: '#f5f5f5'
-  }, 
-  subSections: {
-    display: 'flex',
-    flexDirection: 'row'
-  },
+  //   width: '80vw',
+  //   height: '6vh',
+  //   border: '0.2px solid black',
+  //   padding: '0.2vh', 
+  //   justifyContent: 'space-between',
+  //   backgroundColor: '#f5f5f5'
+  // }, 
+  // subSections: {
+  //   display: 'flex',
+  //   flexDirection: 'row'
+  // },
 
-  pageInput: {
-    width: '4vh',
-    fontSize: '2.5vh',
-    marginLeft: '2vh',
-    marginRight: '2vh',
-    justifyContent: 'center',
-  }, 
+  // pageInput: {
+  //   width: '4vh',
+  //   fontSize: '2.5vh',
+  //   marginLeft: '2vh',
+  //   marginRight: '2vh',
+  //   justifyContent: 'center',
+  // }, 
 
-  aRef: {
-    display: 'block',
-    fontSize: '2.4vh',
-    fontWeight: 'bold',
-    textDecoration: 'none',
-    padding: '2vh',
-    alighItems: 'center',
-    justifyContent: 'center',
-    color: 'black',
-    backgroundColor: 'white',
-    cursor: 'pointer',
-  },
+  // aRef: {
+  //   display: 'block',
+  //   fontSize: '2.4vh',
+  //   fontWeight: 'bold',
+  //   textDecoration: 'none',
+  //   padding: '2vh',
+  //   alighItems: 'center',
+  //   justifyContent: 'center',
+  //   color: 'black',
+  //   backgroundColor: 'white',
+  //   cursor: 'pointer',
+  // },
 
-  pdfStyle: {
-    width: '100%', 
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alighItems: 'center',
-    textAlign: 'center',
-    // boxShadow: "1px 3px 1px #9E9E9E"
-  },
-  pdfStyle1: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alighItems: 'center',
-    textAlign: 'center',
-    alignSelf: 'center',
-  }, 
-  pdfStyleNew:{
-    background: 'linear-gradient(75deg, #3B43F2, #3B8CF2)', 
-    webkitBackgroundClip: 'text',
-  },
+  // pdfStyle: {
+  //   width: '100%', 
+  //   display: 'flex',
+  //   flexDirection: 'column',
+  //   justifyContent: 'center',
+  //   alighItems: 'center',
+  //   textAlign: 'center',
+  //   // boxShadow: "1px 3px 1px #9E9E9E"
+  // },
+  // pdfStyle1: {
+  //   display: 'flex',
+  //   flexDirection: 'column',
+  //   justifyContent: 'center',
+  //   alighItems: 'center',
+  //   textAlign: 'center',
+  //   alignSelf: 'center',
+  // }, 
+  // pdfStyleNew:{
+  //   background: 'linear-gradient(75deg, #3B43F2, #3B8CF2)', 
+  //   webkitBackgroundClip: 'text',
+  // },
 
   
 }
