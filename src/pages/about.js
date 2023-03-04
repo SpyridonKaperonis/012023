@@ -75,9 +75,9 @@ const styles = {
   },
 
   textContainer:{
-    marginLeft: '90px',
-    marginRight: '90px', 
-    marginBottom: '90px',
+    marginLeft: '100px',
+    marginRight: '100px', 
+    marginBottom: '100px',
   },
 
   image:{
