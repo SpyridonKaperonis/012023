@@ -9,11 +9,17 @@ import { NameHeadline } from '../components/nameHealine'
 export const About = () => {
 
   const aboutParagraphs = {
-    two: 'I have always been fascinated by the potential of machine learning to transform industries and improve peoples lives. This passion has driven me to pursue a career in software engineering, where I can use my skills and knowledge to develop and implement machine learning models and algorithms.',
-    one: 'Hi there! My name is Spyridon and I am a software engineer with a passion for machine learning and a love for problem-solving and creating innovative solutions. In my free time, you can find me buried in a good book or hitting the gym to stay active.',
-    three: 'Aside from my love for software and machine learning, I am also an avid reader and enjoy delving into a wide range of books, from science fiction to non-fiction. Reading allows me to expand my knowledge and gain new perspectives, which I believe is crucial for personal growth and success.',
-    four:'In addition to my intellectual pursuits, I also value the importance of staying physically fit. I enjoy participating in a variety of sports and activities, such as running, cycling, and weightlifting. Not only does it keep me healthy and energized, but it also helps me to stay focused and clear-minded.',
-    five:' Overall, I am a driven and motivated individual with a strong passion for software engineering and machine learning. I am excited to bring my skills and enthusiasm to a dynamic team and make a positive impact through my work.',
+    
+    one: 'Hello, I am Spyridon. I was born and raised in Patras, Greece. Patras is located on the northern coast of the Peloponnese peninsula and is the third largest city in Greece. It is an idyllic place to call home and provided me with many opportunities to explore my interests and pursue my passions.',
+    two: 'In 2011, not everyone in Greece owned a personal laptop. During this time, I was in Highschool, and the government provided every student with a small laptop as an introductory gesture to technology for our generation. Using this device, I was able to write my first program in Python, which happened to be a simple calculator. It was a defining moment for me as I discovered the vast possibilities technology offered, and how it could be harnessed to develop tools that could positively impact humanity. This experience sparked my interest in technology and set me on the path to appreciating its potential to change the world.',
+    three: 'Using this device, I was able to write my first program in Python, which happened to be a simple calculator. It was a defining moment for me as I discovered the vast possibilities technology offered, and how it could be harnessed to develop tools that could positively impact humanity. This experience sparked my interest in technology and set me on the path to appreciating its potential to change the world.',
+    four:'While in high school, I pursued tennis and competed in tennis tournaments in Greece. This along with my academic standing paved the way for me to become a student athlete playing tennis in the United States, where I majored in Computer Science.',
+    five:'I always had an earnest interest in Artificial Intelligence. Since the early Stone Age, humans have been crafting tools, and as our brains have evolved, so have our tools, with significant improvements after the industrial revolution. In my opinion, Artificial Intelligence represents the next tool that will aid humans in achieving more within their lifetimes, enhancing their health, work environments, and overall quality of life. ',
+    six:'Inspired by those ideas and beliefs, in September 2022, I started my Master of Science program at Stevens Institute of Technology in Applied Artificial Intelligence. Currently, I am progressing through my second semester, having acquired a vast array of concepts and algorithms during the first semester. This semester my current focus lies on Computer Vision and GPU programming.',
+    seven:'Apart from my professional pursuits, I prioritize maintaining a healthy and active lifestyle, which includes regular exercise. I find that physical activity not only helps me stay fit but also keeps me mentally alert and focused.',
+    eight:'I also enjoy reading books as a means of gaining new perspectives and knowledge. I find it incredibly satisfying to immerse myself in a book and learn something new with each turn of the page. In fact, I often consider books as a source of fuel or energy to recharge my batteries and inspire new ideas.',
+    nine:'Overall, these hobbies and interests not only help me maintain a balanced lifestyle, but also contribute to my personal growth and development as an individual.',
+    ten:'Thank you for taking the time to learn more about me. If our paths cross in the future, I look forward to meeting you and getting to know you better.'
   }
 
 
@@ -26,7 +32,7 @@ export const About = () => {
         <LoadProfileImage style={styles.image} div_style={{alignItems:'center'}} alt='Spyridon Kaperonis'/>
         <NameHeadline name={'Spyridon Kaperonis'} />
         </div>
-        {/* <div>
+        <div style={styles.textContainer}>
           <ParagraphAbout text={aboutParagraphs.one}/>
         
           <ParagraphAbout text={aboutParagraphs.two}/>
@@ -36,8 +42,18 @@ export const About = () => {
           <ParagraphAbout text={aboutParagraphs.four}/>
 
           <ParagraphAbout text={aboutParagraphs.five}/>
+
+          <ParagraphAbout text={aboutParagraphs.six}/>
+
+          <ParagraphAbout text={aboutParagraphs.seven}/>
+
+          <ParagraphAbout text={aboutParagraphs.eight}/>
+
+          <ParagraphAbout text={aboutParagraphs.nine}/>
+
+          <ParagraphAbout text={aboutParagraphs.ten}/>
           
-        </div> */}
+        </div>
     
     </div>
   )
@@ -46,7 +62,7 @@ export const About = () => {
 const styles = {
   container_:{
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -56,6 +72,12 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     marginTop: '100px',
+  },
+
+  textContainer:{
+    marginLeft: '100px',
+    marginRight: '100px', 
+    marginBottom: '100px',
   },
 
   image:{
