@@ -12,7 +12,7 @@ export const About = () => {
     
     one: 'Hello, I am Spyridon. I was born and raised in Patras, Greece. Patras is located on the northern coast of the Peloponnese peninsula and is the third largest city in Greece. It is an idyllic place to call home and provided me with many opportunities to explore my interests and pursue my passions.',
     two: 'In 2011, not everyone in Greece owned a personal laptop. During this time, I was in Highschool, and the government provided every student with a small laptop as an introductory gesture to technology for our generation. Using this device, I was able to write my first program in Python, which happened to be a simple calculator. It was a defining moment for me as I discovered the vast possibilities technology offered, and how it could be harnessed to develop tools that could positively impact humanity. This experience sparked my interest in technology and set me on the path to appreciating its potential to change the world.',
-    three: 'Using this device, I was able to write my first program in Python, which happened to be a simple calculator. It was a defining moment for me as I discovered the vast possibilities technology offered, and how it could be harnessed to develop tools that could positively impact humanity. This experience sparked my interest in technology and set me on the path to appreciating its potential to change the world.',
+    // three: 'Using this device, I was able to write my first program in Python, which happened to be a simple calculator. It was a defining moment for me as I discovered the vast possibilities technology offered, and how it could be harnessed to develop tools that could positively impact humanity. This experience sparked my interest in technology and set me on the path to appreciating its potential to change the world.',
     four:'While in high school, I pursued tennis and competed in tennis tournaments in Greece. This along with my academic standing paved the way for me to become a student athlete playing tennis in the United States, where I majored in Computer Science.',
     five:'I always had an earnest interest in Artificial Intelligence. Since the early Stone Age, humans have been crafting tools, and as our brains have evolved, so have our tools, with significant improvements after the industrial revolution. In my opinion, Artificial Intelligence represents the next tool that will aid humans in achieving more within their lifetimes, enhancing their health, work environments, and overall quality of life. ',
     six:'Inspired by those ideas and beliefs, in September 2022, I started my Master of Science program at Stevens Institute of Technology in Applied Artificial Intelligence. Currently, I am progressing through my second semester, having acquired a vast array of concepts and algorithms during the first semester. This semester my current focus lies on Computer Vision and GPU programming.',
@@ -37,7 +37,7 @@ export const About = () => {
         
           <ParagraphAbout text={aboutParagraphs.two}/>
           
-          <ParagraphAbout text={aboutParagraphs.three}/>
+          {/* <ParagraphAbout text={aboutParagraphs.three}/> */}
 
           <ParagraphAbout text={aboutParagraphs.four}/>
 
