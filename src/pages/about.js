@@ -82,7 +82,8 @@ const styles = {
 
   image:{
     width: '300px',
-    height: '300px',
+    height: 'auto',
     borderRadius: '200px',
-  }
+  },
+
 }
