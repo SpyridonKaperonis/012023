@@ -32,6 +32,9 @@ export default function App() {
     setWindowWidth(width);
   }
 
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  })
 
   const DateTime = new Date();
 
