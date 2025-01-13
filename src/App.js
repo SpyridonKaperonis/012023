@@ -45,7 +45,7 @@ export default function App() {
         <div style={styles.scrollviewContainer}>
             <Routes>
               <Route exact path='/' element={<About/>} />
-              <Route path='/resume' element={<Resume/>} />
+              // <Route path='/resume' element={<Resume/>} />
               <Route path='/projects' element={<Projects/>} />
               {/* <Route path='/contact' element={<Contact/>} /> */}
               {/* <Route path='/resume/SpyridonKaperonis' element={<PdfRenderer/>} /> */}
