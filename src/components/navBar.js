@@ -63,9 +63,9 @@ export const NavBar = (props) => {
                     to={'/'}
                     style={useLocation().pathname==='/' ? styles.sideBarButtonClicked : styles.sideBarButton}>About Me</Link>
 
-                // <Link 
-                //     to={'/resume'} 
-                //     style={useLocation().pathname==='/resume' ? styles.sideBarButtonClicked : styles.sideBarButton}>Resume</Link>
+                {/* <Link 
+                     to={'/resume'} 
+                     style={useLocation().pathname==='/resume' ? styles.sideBarButtonClicked : styles.sideBarButton}>Resume</Link> */}
             
                 <Link 
                     to={'/projects'} 
